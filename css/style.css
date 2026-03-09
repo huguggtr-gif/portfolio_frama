@@ -1093,10 +1093,17 @@ body {
         flex-direction: column;
         align-items: center;
     }
+    
 
 
     .series-title {
         font-size: 36px;
+    }
+    .series-txt {
+        font-size: 14px;
+        line-height: 1;
+        margin-bottom: 30px;
+        max-width: 300px; /* 텍스트 너비를 제한해서 읽기 편하게 */
     }
 
     .main-visual {
@@ -1259,6 +1266,15 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .series-title {
+        font-size: 36px;
+    }
+    .series-txt {
+        font-size: 14px;
+        line-height: 1;
+        margin-bottom: 30px;
+        max-width: 300px; /* 텍스트 너비를 제한해서 읽기 편하게 */
     }
 }
 
