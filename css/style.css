@@ -1072,15 +1072,24 @@ body {
 
     .main-visual {
         display: flex;
-        align-items: flex-start; /* 중앙 정렬을 해제하고 위로 붙입니다 */
-        padding-top: 100px !important; /* 여기서 원하는 만큼 위쪽 여백을 줍니다 */
-        height: 60vh;
+        /* 위아래 정렬을 '중앙'으로 다시 되돌립니다 */
+        align-items: center;
+        /* 대신 justify-content로 수직 위치를 미세하게 조정할 수 있습니다 */
+        justify-content: center;
+
+        height: 70vh;
+        /* 높이를 조금 키우면 텍스트가 더 여유 있어 보입니다 */
+        padding: 0 20px !important;
+        /* 억지로 주던 padding-top 100px을 제거하세요! */
+        background-position: center center;
     }
 
     .main-content {
-        margin-top: 0; /* 마진 대신 부모 패딩에 맡깁니다 */
+        margin-top: 0;
+        text-align: center;
+        /* 모바일에서는 텍스트를 중앙 정렬하는 것이 훨씬 안정적입니다 */
+        width: 100%;
     }
-
 
 
     .series-title {
@@ -1225,9 +1234,25 @@ body {
         width: 60px;
     }
 
-    .main-content {
+    .main-visual {
+        display: flex;
+        /* 위아래 정렬을 '중앙'으로 다시 되돌립니다 */
+        align-items: center;
+        /* 대신 justify-content로 수직 위치를 미세하게 조정할 수 있습니다 */
+        justify-content: center;
 
-        margin-top: 80px;
+        height: 70vh;
+        /* 높이를 조금 키우면 텍스트가 더 여유 있어 보입니다 */
+        padding: 0 20px !important;
+        /* 억지로 주던 padding-top 100px을 제거하세요! */
+        background-position: center center;
+    }
+
+    .main-content {
+        margin-top: 0;
+        text-align: center;
+        /* 모바일에서는 텍스트를 중앙 정렬하는 것이 훨씬 안정적입니다 */
+        width: 100%;
     }
 }
 
