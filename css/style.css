@@ -1071,8 +1071,7 @@ body {
     }
 
     .main-content {
-        max-width: 730px;
-        color: #fff;
+      
         margin-top: 80px;
     }
 
@@ -1218,6 +1217,10 @@ body {
 
     .header-left .logo img {
         width: 60px;
+    }
+    .main-content {
+      
+        margin-top: 80px;
     }
 }
 
