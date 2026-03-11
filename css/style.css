@@ -333,7 +333,9 @@ body {
     left: 0;
     opacity: 0;
     transform: scale(1.05);
+    border: 1px solid #C3C2C2;
 }
+
 
 .category-item:hover .base-img {
     opacity: 0;
@@ -342,6 +344,7 @@ body {
 .category-item:hover .hover-img {
     opacity: 1;
     transform: scale(1);
+    letter-spacing: 0.5px;
 }
 
 
@@ -463,6 +466,7 @@ body {
     color: #272727;
 }
 
+
 .content-link,
 .project-card a {
     text-decoration: none;
@@ -550,6 +554,7 @@ body {
 .project-card .read-more {
     display: inline-block;
     position: relative;
+    padding: 10px 0;
     text-decoration: none;
     font-size: 16px;
     font-weight: 800;
@@ -557,14 +562,22 @@ body {
     margin-top: 15px;
     cursor: pointer;
 }
+.project-card .read-more::before {
+    content: "";
+    position: absolute;
+    top: -15px;   
+    bottom: -15px; 
+    left: -20px;  
+    right: -20px;  
+    background: transparent; 
+}
 
 .project-card .read-more::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -3px;
+    bottom: 5px;
     width: 0;
-    /* 처음엔 0 */
     height: 2px;
     background: #691010;
     transition: width 0.3s ease;
@@ -684,8 +697,22 @@ body {
 }
 
 .footer-menu li {
-    margin-bottom: 5px;
+    margin-bottom: 0; 
     cursor: pointer;
+}
+
+.footer-menu li a {
+    display: block;          
+    padding: 6px 0;         
+    text-decoration: none;
+    color: inherit;         
+    transition: 0.2s;      
+}
+.footer-menu li a:hover {
+    color: #691010;
+    transform: translateY(-2px);
+    font-weight:bold;
+    opacity: 0.8;          
 }
 
 /* 뉴스레터 */
@@ -722,11 +749,15 @@ body {
     cursor: pointer;
 
 }
+.footer-newsletter button:hover{
+    background: #691010;
+
+}
 
 .footer-newsletter span {
     display: block;
     margin-top: 15px;
-    font-size: 10px;
+    font-size: 12px;
     color: #C3C2C2;
     line-height: 1.5;
 }
@@ -739,19 +770,34 @@ body {
 
 .footer-connect span {
     margin-right: 40px;
+    font-weight: bold;
     letter-spacing: 1px;
+    display: inline-block; 
+    vertical-align: middle;
 }
 
+
 .footer-connect a {
-    margin: 0 20px;
+    display: inline-block;  
+    padding: 10px 15px;    
+    margin: 0 5px;        
     text-decoration: none;
     color: #272727;
+    transition: all 0.3s ease; 
+    vertical-align: middle;
+}
+
+.footer-connect a:hover {
+    color: #691010;        
+    transform: translateY(-2px); 
+    opacity: 0.8;
+    font-weight:bold;
 }
 
 /* 하단 */
 .footer-bottom {
     text-align: center;
-    font-size: 11px;
+    font-size: 12px;
     color: #C3C2C2;
 }
 
@@ -979,11 +1025,39 @@ body {
 
     .main-content {
         width: 100%;
-        max-width: 730px;
+        max-width: 500px;
+        margin: 0;
+        text-align: center;
     }
 
+    .main-content p.series-txt {
+        text-align: left;
+        line-height: 1.8;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+
+    .main-content h2{
+        margin-top:100px;
+        margin-bottom: 30px;
+        letter-spacing: 0.8px;
+        
+    }
     .main-content p{
-        line-height: 1.2;
+        margin-bottom: 100px;
+    }
+
+    .main-visual {
+        padding: 0 50px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .series-title {
+        font-size: 48px;
+        margin-bottom: 15px;
     }
 
     .side-menu {
@@ -1080,13 +1154,13 @@ body {
 
     .main-visual {
         display: flex;
-        align-items: center; 
+        align-items: center;
         justify-content: center;
-        
-        min-height: 80vh; 
-        height: auto; 
-        
-        padding: 120px 20px 80px 20px !important; 
+
+        min-height: 80vh;
+        height: auto;
+
+        padding: 120px 20px 80px 20px !important;
         background-position: center center;
     }
 
@@ -1098,17 +1172,18 @@ body {
         flex-direction: column;
         align-items: center;
     }
-    
+
 
 
     .series-title {
         font-size: 36px;
     }
+
     .series-txt {
         font-size: 14px;
         line-height: 1;
         margin-bottom: 30px;
-        max-width: 300px; 
+        max-width: 300px;
     }
 
     .main-visual {
@@ -1247,11 +1322,11 @@ body {
 
     .main-visual {
         display: flex;
-        align-items: center; 
+        align-items: center;
         justify-content: center;
-        min-height: 80vh; 
-        height: auto; 
-        padding: 120px 20px 80px 20px !important; 
+        min-height: 80vh;
+        height: auto;
+        padding: 120px 20px 80px 20px !important;
         background-position: center center;
     }
 
@@ -1263,14 +1338,16 @@ body {
         flex-direction: column;
         align-items: center;
     }
+
     .series-title {
         font-size: 36px;
     }
+
     .series-txt {
         font-size: 14px;
         line-height: 1;
         margin-bottom: 30px;
-        max-width: 300px; 
+        max-width: 300px;
     }
 }
 

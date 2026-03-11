@@ -487,24 +487,57 @@ body {
 
 /* 페이지네이션 */
 .pagination {
-    margin-top: 60px;
-    text-align: center;
-    font-size: 0.85rem;
-    letter-spacing: 5px;
+    margin: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* 버튼 사이 간격 */
+    font-family: 'Roboto Mono', monospace;
+    font-size: 13px;
+}
+
+/* "PAGE" 글자 스타일 */
+.pagination .page-label {
+    margin-right: 15px;
     color: #C3C2C2;
+    letter-spacing: 1px;
 }
 
+/* 숫자 및 화살표 버튼 공통 (클릭 범위 확보) */
 .pagination a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 38px;
     text-decoration: none;
-    color: inherit;
-    margin: 0 5px;
+    color: #C3C2C2;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    border-radius: 2px; /* 살짝 부드러운 직각 */
 }
 
-.pagination a.active {
+/* 마우스 올렸을 때 효과 */
+.pagination a:hover {
+    background-color: #f5f5f5;
     color: #272727;
+}
+
+/* 현재 페이지 표시 (활성화 상태) */
+.pagination a.active {
+    background-color: #272727;
+    color: #fff;
     font-weight: bold;
-    text-decoration: underline;
-    text-underline-offset: 5px;
+}
+
+/* 다음 페이지 화살표 버튼 */
+.pagination .next-btn {
+    color: #272727;
+    margin-left: 5px;
+}
+
+.pagination .next-btn i {
+    font-size: 11px; /* 아이콘 크기 조절 */
 }
 
 
@@ -535,7 +568,7 @@ body {
     font-size: 12px;
 }
 
-.fotter-newsletter button {
+.footer-newsletter button {
     font-size: 8px;
 }
 
@@ -552,8 +585,22 @@ body {
 }
 
 .footer-menu li {
-    margin-bottom: 5px;
+    margin-bottom: 0; 
     cursor: pointer;
+}
+
+.footer-menu li a {
+    display: block;          
+    padding: 6px 0;         
+    text-decoration: none;
+    color: inherit;         
+    transition: 0.2s;      
+}
+.footer-menu li a:hover {
+    color: #691010;
+    transform: translateY(-2px);
+    font-weight:bold;
+    opacity: 0.8;          
 }
 
 /* 뉴스레터 */
@@ -590,11 +637,15 @@ body {
     cursor: pointer;
 
 }
+.footer-newsletter button:hover{
+    background: #691010;
+
+}
 
 .footer-newsletter span {
     display: block;
     margin-top: 15px;
-    font-size: 10px;
+    font-size: 12px;
     color: #C3C2C2;
     line-height: 1.5;
 }
@@ -607,27 +658,43 @@ body {
 
 .footer-connect span {
     margin-right: 40px;
+    font-weight: bold;
     letter-spacing: 1px;
+    /* 텍스트 정렬을 위해 추가 */
+    display: inline-block; 
+    vertical-align: middle;
 }
 
+
 .footer-connect a {
-    margin: 0 20px;
+    display: inline-block;  
+    padding: 10px 15px;    
+    margin: 0 5px;        
     text-decoration: none;
     color: #272727;
+    transition: all 0.3s ease; 
+    vertical-align: middle;
+}
+
+.footer-connect a:hover {
+    color: #691010;        
+    transform: translateY(-2px); 
+    opacity: 0.8;
+    font-weight:bold;
 }
 
 /* 하단 */
 .footer-bottom {
     text-align: center;
-    font-size: 11px;
+    font-size: 12px;
     color: #C3C2C2;
 }
+
 .footer-bottom a {
     margin-left: 20px;
     color: #C3C2C2;
     text-decoration: underline;
 }
-
 
 
 /*SIDE MENU*/

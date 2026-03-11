@@ -324,7 +324,7 @@ body {
     opacity: 1;
 }
 
-/* 하단 푸터 링크들 */
+/* 하단 링크들 */
 .side-footer-links {
     padding: 20px 60px;
 }
@@ -357,12 +357,12 @@ body {
 
 /* --- FURNITURE MAIN PAGE --- */
 .furniture-page {
-    padding-top: 100px;
+    padding-top: 80px;
     background-color: #fff;
 }
 
 .furniture-intro {
-    padding: 20px 120px 80px 0px;
+    padding: 0 120px 80px 0px;
 }
 
 .intro-inner {
@@ -486,7 +486,6 @@ body {
     font-family: 'Roboto Mono', monospace;
     font-size: 12px;
     color: #272727;
-
 }
 
 .footer .inner {
@@ -506,7 +505,7 @@ body {
     font-size: 12px;
 }
 
-.fotter-newsletter button {
+.footer-newsletter button {
     font-size: 8px;
 }
 
@@ -523,8 +522,22 @@ body {
 }
 
 .footer-menu li {
-    margin-bottom: 5px;
+    margin-bottom: 0; 
     cursor: pointer;
+}
+
+.footer-menu li a {
+    display: block;          
+    padding: 6px 0;         
+    text-decoration: none;
+    color: inherit;         
+    transition: 0.2s;      
+}
+.footer-menu li a:hover {
+    color: #691010;
+    transform: translateY(-2px);
+    font-weight:bold;
+    opacity: 0.8;          
 }
 
 /* 뉴스레터 */
@@ -547,7 +560,6 @@ body {
     width: 100%;
     padding: 10px 20px;
     border: 1px solid #272727;
-    color: #fff;
     margin-bottom: 3px !important;
 }
 
@@ -562,11 +574,15 @@ body {
     cursor: pointer;
 
 }
+.footer-newsletter button:hover{
+    background: #691010;
+
+}
 
 .footer-newsletter span {
     display: block;
     margin-top: 15px;
-    font-size: 10px;
+    font-size: 12px;
     color: #C3C2C2;
     line-height: 1.5;
 }
@@ -579,19 +595,35 @@ body {
 
 .footer-connect span {
     margin-right: 40px;
+    font-weight: bold;
     letter-spacing: 1px;
+    /* 텍스트 정렬을 위해 추가 */
+    display: inline-block; 
+    vertical-align: middle;
 }
 
+
 .footer-connect a {
-    margin: 0 20px;
+    display: inline-block;  
+    padding: 10px 15px;    
+    margin: 0 5px;        
     text-decoration: none;
     color: #272727;
+    transition: all 0.3s ease; 
+    vertical-align: middle;
+}
+
+.footer-connect a:hover {
+    color: #691010;        
+    transform: translateY(-2px); 
+    opacity: 0.8;
+    font-weight:bold;
 }
 
 /* 하단 */
 .footer-bottom {
     text-align: center;
-    font-size: 11px;
+    font-size: 12px;
     color: #C3C2C2;
 }
 
@@ -600,8 +632,6 @@ body {
     color: #C3C2C2;
     text-decoration: underline;
 }
-
-
 
 
 
@@ -636,6 +666,14 @@ body {
 
 /* 2. 태블릿 */
 @media (max-width: 1024px) {
+    .furniture-page {
+        padding-top: 10px;
+    }
+
+    .furniture-intro {
+        padding: 0 40px 60px 40px;
+    }
+
     .intro-inner {
         flex-direction: column;
         gap: 40px;
@@ -643,7 +681,7 @@ body {
 
     .furniture-grid {
         grid-template-columns: repeat(2, 1fr) !important;
-        /* 2열 고정 */
+
     }
 
     .grid-item {
@@ -676,6 +714,18 @@ body {
 
     .mobile-search-btn {
         display: block !important;
+    }
+
+    .furniture-page {
+        padding-top: 40px;
+    }
+
+    .furniture-intro {
+        padding: 0 20px 40px 20px;
+    }
+
+    .intro-text {
+        padding-top: 10px;
     }
 
     .header-inner {
@@ -819,7 +869,7 @@ body {
 
 
 
-/* 초소형 모바일 (Z 폴드5 전용 최후의 수단) */
+/* 초소형 모바일  */
 @media (max-width: 350px) {
     .header-inner {
         padding: 10px 8px;
