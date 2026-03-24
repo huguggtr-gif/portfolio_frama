@@ -136,8 +136,10 @@ function setupQty(minusId, plusId, valueId, totalId) {
 setupQty('qtyMinus', 'qtyPlus', 'qtyValue', 'totalPrice')
 setupQty('sideQtyMinus', 'sideQtyPlus', 'sideQtyValue', null)
 
+
+
 /* =========================
-   동영상 플레이 버튼
+   동영상 
 ========================= */
 const playBtn = document.getElementById('playBtn')
 const productVideo = document.getElementById('productVideo')

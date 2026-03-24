@@ -122,7 +122,7 @@
                         <img src="img/detail/03.jpg" alt="thumb2">
                     </button>
                     <button class="thumb" data-img="img/chair_03.jpg">
-                        <img src="img/detail/04.webp" alt="thumb3">
+                        <img src="img/detail/08.webp" alt="thumb3">
                     </button>
                 </div>
             </div>
@@ -164,9 +164,9 @@
                 <!-- 색상 스와치 -->
                 <div class="option-row">
                     <div class="colour-swatches">
-                        <button class="swatch active" data-name="Silver" style="background: #c0c0c0;"
+                        <button class="swatch active" data-name="Silver" style="background: #cecbcb;"
                             aria-label="Silver"></button>
-                        <button class="swatch" data-name="Beige" style="background: #d4b896;"
+                        <button class="swatch" data-name="Beige" style="background: #CBAD93;"
                             aria-label="Beige"></button>
                         <button class="swatch" data-name="Dark"
                             style="background: #5a5a5a; background-image: url('img/chair_dark_swatch.jpg'); background-size: cover;"
@@ -206,69 +206,119 @@
             </div>
         </section>
 
-        <!-- ② 하단 구역: 동영상 + 고정 사이드 패널 -->
+        <!-- 하단 구역 -->
         <section class="product-bottom">
 
-            <!-- 왼쪽: 동영상 + 상세 설명 -->
+            <!-- 하단 구역 왼쪽 상세페이지 -->
             <div class="bottom-left">
 
                 <!-- 동영상 -->
                 <div class="video-wrap">
-                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/h0jalfqvlMk"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
+                    <iframe
+                        src="https://www.youtube.com/embed/h0jalfqvlMk?autoplay=1&mute=1&controls=0&loop=1&playlist=h0jalfqvlMk"
+                        allow="autoplay; encrypted-media" allowfullscreen>
                     </iframe>
                 </div>
+                <!--무료배송 안내 배너-->
+                <div class="delivery">
+                    <img src="img/detail/delivery.png">
+                </div>
 
-                <!-- 상세 설명 (동영상 하단) -->
+                <!-- 상세01 브랜드소개 -->
+                <div class="detail-brand">
+                    <div class="brand-hero">
+                        <img src="img/detail/detail01.png" alt="FRAMA 브랜드 이미지" class="brand-hero-img">
+                        <div class="brand-hero-overlay">
+                            <img src="img/logo01.png" alt="FRAMA 로고" class="brand-hero-logo">
+                            <p class="brand-hero-text">
+                                덴마크 코펜하겐에서 시작된 <strong>Frama</strong>는<br>
+                                북유럽 특유의 미니멀리즘과 장인정신을 바탕으로,<br>
+                                감각적이고 품격 있는 라이프스타일을 제안하는<br>
+                                하이엔드 디자인 브랜드입니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 상세02 디자이너-->
+                <div class="detail-designer">
+                    <div class="designer-header">
+                        <h2 class="designer-main-title">작은 원이 그리는 완벽한 휴식</h2>
+                        <p class="designer-sub-title">"Petit Rond Chair"</p>
+                    </div>
+                    <div class="designer-body">
+                        <div class="designer-photo-wrap">
+                            <img src="img/detail/detail02.png" alt="디자이너 트롤스 그룸 슈벤센" class="designer-photo">
+                        </div>
+                        <div class="designer-copy">
+                            <p>건축가이자 디자이너 트롤스 그룸 슈벤센이 설계한<br> 쁘띠 론드 컬렉션은 프랑스어로 '작은 원'을 뜻하는<br> 이름에서 영감을 받았습니다.</p>
+                            <p>건축적 시선으로 완성된 슬림한 라인은 편안함과 견고함, 그리고 고유의 개성을 담아냅니다.</p>
+                            <p>군더더기 없는 기하학적 형태는 공간에 자연스럽게<br> 스며들고, 금속의 차가움을 넘어선 유연한 곡선은 새로운 안락함을 선사합니다.</p>
+                            <p>단순함 속에서 완성된 균형과 디테일을 직접 경험해<br> 보세요.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-video">
+                    <video autoplay muted loop playsinline>
+                        <source src="img/detail/video01.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <!-- 상세03 seies01 -->
+                <div class="detail-series">
+                    <div class="series-image-wrap">
+                        <img src="img/detail/detail03.jpg" alt="Petit Rond Chair 시리즈" class="series-full-img">
+                        <div class="series-overlay">
+                            <div class="series-badge">
+                                <img src="img/detail/ser01.png" alt="series 01" class="series-badge-img">
+                            </div>
+                            <div class="series-text-block">
+                                <h3 class="series-chair-title">Petit&nbsp;Rond&nbsp;Chair</h3>
+                                <p class="series-tagline">당신의 공간 업그레이드</p>
+                                <p class="series-desc">공간을 바꾸는 디자인 체어<br>감각은 디테일에서 시작됩니다</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- PRODUCT SPECIFICATIONS  -->
                 <div class="detail-description">
                     <div class="desc-block">
-                        <h2 class="desc-heading">About the Chair</h2>
-                        <p>Petit Rond Chair in stainless steel — a timeless silhouette refined through material mastery.
-                            The round seat and curved backrest create a visual softness that contrasts beautifully with
-                            the industrial precision of polished steel.</p>
-                        <p>Designed for both indoor and outdoor use, the chair's surface develops a subtle patina over
-                            time, becoming uniquely yours.</p>
-                    </div>
-
-                    <div class="desc-block">
-                        <h2 class="desc-heading">Materials & Finish</h2>
-                        <p>Brushed stainless steel frame with hand-polished seat. Each chair is individually finished,
-                            ensuring slight variation that reflects the handmade nature of the process.</p>
-                    </div>
-
-                    <div class="desc-block">
-                        <h2 class="desc-heading">Dimensions</h2>
+                        <h2 class="desc-heading">PRODUCT SPECIFICATIONS</h2>
                         <div class="spec-table">
                             <div class="spec-row">
-                                <span class="spec-key">Width</span>
-                                <span class="spec-val">46 cm</span>
+                                <span class="spec-key">Dimensions</span>
+                                <span class="spec-val">H 85/W 45/ 48.5 D cm</span>
                             </div>
                             <div class="spec-row">
-                                <span class="spec-key">Depth</span>
-                                <span class="spec-val">50 cm</span>
+                                <span class="spec-key">Material</span>
+                                <span class="spec-val">Stainless Steel</span>
                             </div>
                             <div class="spec-row">
-                                <span class="spec-key">Height</span>
-                                <span class="spec-val">81 cm</span>
+                                <span class="spec-key">Finish</span>
+                                <span class="spec-val">Brushed</span>
                             </div>
                             <div class="spec-row">
-                                <span class="spec-key">Seat Height</span>
-                                <span class="spec-val">46 cm</span>
+                                <span class="spec-key">Color</span>
+                                <span class="spec-val">None</span>
                             </div>
                             <div class="spec-row">
-                                <span class="spec-key">Weight</span>
-                                <span class="spec-val">4.2 kg</span>
+                                <span class="spec-key">Designer</span>
+                                <span class="spec-val">Troels Grum-Schwnensen</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-key">Design Year</span>
+                                <span class="spec-val">2020</span>
+                            </div>
+                            <div class="spec-row">
+                                <span class="spec-key">Made in</span>
+                                <span class="spec-val">PRC</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="desc-block">
-                        <h2 class="desc-heading">Care Instructions</h2>
-                        <p>Wipe clean with a soft, dry cloth. For outdoor use, store indoors during extended periods of
-                            wet weather. Avoid abrasive cleaners that may scratch the polished surface.</p>
-                    </div>
+
                 </div>
             </div>
 
@@ -284,8 +334,8 @@
                     <div class="sidebar-swatches">
                         <p class="sidebar-label">Colour</p>
                         <div class="colour-swatches">
-                            <button class="swatch active" style="background:#c0c0c0;" aria-label="Silver"></button>
-                            <button class="swatch" style="background:#d4b896;" aria-label="Beige"></button>
+                            <button class="swatch active" style="background:#cecbcb;" aria-label="Silver"></button>
+                            <button class="swatch" style="background:#CBAD93;" aria-label="Beige"></button>
                             <button class="swatch" style="background:#5a5a5a;" aria-label="Dark"></button>
                         </div>
                     </div>
