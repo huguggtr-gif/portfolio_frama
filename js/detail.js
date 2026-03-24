@@ -73,10 +73,12 @@ thumbs.forEach((thumb) => {
   thumb.addEventListener('click', () => {
     thumbs.forEach((t) => t.classList.remove('active'))
     thumb.classList.add('active')
+
     if (mainImage) {
+      const thumbImg = thumb.querySelector('img')
       mainImage.style.opacity = '0'
       setTimeout(() => {
-        mainImage.src = thumb.dataset.img
+        mainImage.src = thumbImg.src   // ← 썸네일 img의 src를 그대로 사용
         mainImage.style.opacity = '1'
       }, 200)
     }

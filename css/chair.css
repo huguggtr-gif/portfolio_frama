@@ -491,7 +491,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px; /* 버튼 사이 간격 */
+    gap: 5px;
+    /* 버튼 사이 간격 */
     font-family: 'Roboto Mono', monospace;
     font-size: 13px;
 }
@@ -514,7 +515,8 @@ body {
     color: #C3C2C2;
     background-color: transparent;
     transition: all 0.3s ease;
-    border-radius: 2px; /* 살짝 부드러운 직각 */
+    border-radius: 2px;
+    /* 살짝 부드러운 직각 */
 }
 
 /* 마우스 올렸을 때 효과 */
@@ -537,7 +539,8 @@ body {
 }
 
 .pagination .next-btn i {
-    font-size: 11px; /* 아이콘 크기 조절 */
+    font-size: 11px;
+    /* 아이콘 크기 조절 */
 }
 
 
@@ -585,22 +588,23 @@ body {
 }
 
 .footer-menu li {
-    margin-bottom: 0; 
+    margin-bottom: 0;
     cursor: pointer;
 }
 
 .footer-menu li a {
-    display: block;          
-    padding: 6px 0;         
+    display: block;
+    padding: 6px 0;
     text-decoration: none;
-    color: inherit;         
-    transition: 0.2s;      
+    color: inherit;
+    transition: 0.2s;
 }
+
 .footer-menu li a:hover {
     color: #691010;
     transform: translateY(-2px);
-    font-weight:bold;
-    opacity: 0.8;          
+    font-weight: bold;
+    opacity: 0.8;
 }
 
 /* 뉴스레터 */
@@ -637,7 +641,8 @@ body {
     cursor: pointer;
 
 }
-.footer-newsletter button:hover{
+
+.footer-newsletter button:hover {
     background: #691010;
 
 }
@@ -661,26 +666,26 @@ body {
     font-weight: bold;
     letter-spacing: 1px;
     /* 텍스트 정렬을 위해 추가 */
-    display: inline-block; 
+    display: inline-block;
     vertical-align: middle;
 }
 
 
 .footer-connect a {
-    display: inline-block;  
-    padding: 10px 15px;    
-    margin: 0 5px;        
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
     text-decoration: none;
     color: #272727;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
     vertical-align: middle;
 }
 
 .footer-connect a:hover {
-    color: #691010;        
-    transform: translateY(-2px); 
+    color: #691010;
+    transform: translateY(-2px);
     opacity: 0.8;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 /* 하단 */
@@ -952,13 +957,13 @@ body {
 /* 3. 모바일  */
 @media (max-width: 768px) {
 
-     .header-center {
+    .header-center {
         display: none;
         /* 검색바 숨김 */
     }
-    
+
     .mobile-search-btn {
-        display: block !important; 
+        display: block !important;
     }
 
     .header-inner {
@@ -1102,14 +1107,17 @@ body {
     .header-inner {
         padding: 10px 8px;
     }
+
     .header-right {
-        gap: 8px; 
+        gap: 8px;
     }
+
     .header-left .logo img {
         width: 60px;
     }
-    
+
 }
+
 @media (hover: hover) and (pointer: fine) {
 
     *,
@@ -1119,9 +1127,9 @@ body {
     }
 
 }
+
 @media (hover: none) and (pointer: coarse) {
     .cursor-dot {
         display: none;
     }
 }
-

@@ -94,9 +94,9 @@
     </nav>
 
 
-   <!-- ===== MAIN ===== -->
+    <!-- ===== MAIN ===== -->
     <main class="detail-main">
- 
+
         <!-- 브레드크럼 -->
         <nav class="breadcrumb">
             <a href="index.html">Home</a>
@@ -105,10 +105,10 @@
             <span class="bc-arrow"><i class="fa-solid fa-chevron-right"></i></span>
             <span class="bc-current">Sitting</span>
         </nav>
- 
+
         <!-- ① 상단 구역: 이미지 갤러리 + 상품 정보 -->
         <section class="product-top">
- 
+
             <!-- 왼쪽: 갤러리 -->
             <div class="product-gallery">
                 <div class="gallery-main">
@@ -119,27 +119,27 @@
                         <img src="img/detail/02.webp" alt="thumb1">
                     </button>
                     <button class="thumb" data-img="img/chair_02.jpg">
-                        <img src="img/detail/03.webp" alt="thumb2">
+                        <img src="img/detail/03.jpg" alt="thumb2">
                     </button>
                     <button class="thumb" data-img="img/chair_03.jpg">
                         <img src="img/detail/04.webp" alt="thumb3">
                     </button>
                 </div>
             </div>
- 
+
             <!-- 오른쪽: 상품 정보 -->
             <div class="product-info">
                 <h1 class="product-title">PETIT ROND CHAIR | STAINLESS STEEL</h1>
- 
+
                 <div class="product-rating">
                     <i class="fa-solid fa-star"></i>
                     <span class="rating-score">5</span>
                     <span class="rating-divider">|</span>
                     <a href="#reviews" class="rating-link">127개 리뷰 보기</a>
                 </div>
- 
+
                 <p class="product-price">820,000원</p>
- 
+
                 <!-- 혜택정보 -->
                 <div class="benefit-box">
                     <p class="benefit-title">혜택정보</p>
@@ -158,27 +158,30 @@
                         </li>
                     </ul>
                 </div>
- 
+
                 <div class="divider"></div>
- 
+
                 <!-- 색상 스와치 -->
                 <div class="option-row">
                     <div class="colour-swatches">
-                        <button class="swatch active" data-name="Silver" style="background: #c0c0c0;" aria-label="Silver"></button>
-                        <button class="swatch" data-name="Beige" style="background: #d4b896;" aria-label="Beige"></button>
-                        <button class="swatch" data-name="Dark" style="background: #5a5a5a; background-image: url('img/chair_dark_swatch.jpg'); background-size: cover;" aria-label="Dark"></button>
+                        <button class="swatch active" data-name="Silver" style="background: #c0c0c0;"
+                            aria-label="Silver"></button>
+                        <button class="swatch" data-name="Beige" style="background: #d4b896;"
+                            aria-label="Beige"></button>
+                        <button class="swatch" data-name="Dark"
+                            style="background: #5a5a5a; background-image: url('img/chair_dark_swatch.jpg'); background-size: cover;"
+                            aria-label="Dark"></button>
                     </div>
- 
+
                     <!-- 타입 드롭다운 -->
                     <div class="select-wrap">
                         <select id="chairType">
                             <option value="chair">CHAIR</option>
-                            <option value="armchair">ARMCHAIR</option>
                             <option value="stool">STOOL</option>
                         </select>
                         <i class="fa-solid fa-chevron-down select-icon"></i>
                     </div>
- 
+
                     <!-- 수량 -->
                     <div class="qty-control">
                         <button class="qty-btn" id="qtyMinus">-</button>
@@ -186,15 +189,15 @@
                         <button class="qty-btn" id="qtyPlus">+</button>
                     </div>
                 </div>
- 
+
                 <div class="divider"></div>
- 
+
                 <!-- 총 상품금액 -->
                 <div class="total-price-row">
                     <span class="total-label">총 상품금액</span>
                     <span class="total-price" id="totalPrice">820,000원</span>
                 </div>
- 
+
                 <!-- 구매 버튼 -->
                 <div class="buy-buttons">
                     <button class="btn-cart">장바구니 담기</button>
@@ -202,38 +205,39 @@
                 </div>
             </div>
         </section>
- 
+
         <!-- ② 하단 구역: 동영상 + 고정 사이드 패널 -->
         <section class="product-bottom">
- 
+
             <!-- 왼쪽: 동영상 + 상세 설명 -->
             <div class="bottom-left">
- 
+
                 <!-- 동영상 -->
                 <div class="video-wrap">
-                    <img src="img/chair_video_thumb.jpg" alt="Product Video" class="video-thumb">
-                    <button class="play-btn" id="playBtn" aria-label="Play video">
-                        <i class="fa-solid fa-play"></i>
-                    </button>
-                    <!-- 실제 비디오 (숨김 상태로 시작) -->
-                    <video id="productVideo" controls style="display:none; width:100%;">
-                        <source src="video/chair_detail.mp4" type="video/mp4">
-                    </video>
+                    <iframe width="100%" height="600" src="https://www.youtube.com/embed/h0jalfqvlMk"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
                 </div>
- 
+
                 <!-- 상세 설명 (동영상 하단) -->
                 <div class="detail-description">
                     <div class="desc-block">
                         <h2 class="desc-heading">About the Chair</h2>
-                        <p>Petit Rond Chair in stainless steel — a timeless silhouette refined through material mastery. The round seat and curved backrest create a visual softness that contrasts beautifully with the industrial precision of polished steel.</p>
-                        <p>Designed for both indoor and outdoor use, the chair's surface develops a subtle patina over time, becoming uniquely yours.</p>
+                        <p>Petit Rond Chair in stainless steel — a timeless silhouette refined through material mastery.
+                            The round seat and curved backrest create a visual softness that contrasts beautifully with
+                            the industrial precision of polished steel.</p>
+                        <p>Designed for both indoor and outdoor use, the chair's surface develops a subtle patina over
+                            time, becoming uniquely yours.</p>
                     </div>
- 
+
                     <div class="desc-block">
                         <h2 class="desc-heading">Materials & Finish</h2>
-                        <p>Brushed stainless steel frame with hand-polished seat. Each chair is individually finished, ensuring slight variation that reflects the handmade nature of the process.</p>
+                        <p>Brushed stainless steel frame with hand-polished seat. Each chair is individually finished,
+                            ensuring slight variation that reflects the handmade nature of the process.</p>
                     </div>
- 
+
                     <div class="desc-block">
                         <h2 class="desc-heading">Dimensions</h2>
                         <div class="spec-table">
@@ -259,23 +263,24 @@
                             </div>
                         </div>
                     </div>
- 
+
                     <div class="desc-block">
                         <h2 class="desc-heading">Care Instructions</h2>
-                        <p>Wipe clean with a soft, dry cloth. For outdoor use, store indoors during extended periods of wet weather. Avoid abrasive cleaners that may scratch the polished surface.</p>
+                        <p>Wipe clean with a soft, dry cloth. For outdoor use, store indoors during extended periods of
+                            wet weather. Avoid abrasive cleaners that may scratch the polished surface.</p>
                     </div>
                 </div>
             </div>
- 
+
             <!-- 오른쪽: 고정 사이드 패널 -->
             <aside class="bottom-sidebar" id="bottomSidebar">
                 <div class="sidebar-inner">
                     <p class="sidebar-product-name">PETIT ROND CHAIR</p>
                     <p class="sidebar-material">Stainless Steel</p>
                     <p class="sidebar-price">820,000원</p>
- 
+
                     <div class="divider"></div>
- 
+
                     <div class="sidebar-swatches">
                         <p class="sidebar-label">Colour</p>
                         <div class="colour-swatches">
@@ -284,7 +289,7 @@
                             <button class="swatch" style="background:#5a5a5a;" aria-label="Dark"></button>
                         </div>
                     </div>
- 
+
                     <div class="sidebar-qty">
                         <p class="sidebar-label">Quantity</p>
                         <div class="qty-control">
@@ -293,23 +298,28 @@
                             <button class="qty-btn" id="sideQtyPlus">+</button>
                         </div>
                     </div>
- 
+
+                    <div class="sidebar-total-row">
+                        <span class="sidebar-label">총 상품금액</span>
+                        <span class="sidebar-total-price" id="sideTotalPrice">820,000원</span>
+                    </div>
+
                     <div class="divider"></div>
- 
+
                     <div class="buy-buttons">
                         <button class="btn-cart">장바구니 담기</button>
                         <button class="btn-buy">바로 구매하기</button>
                     </div>
- 
+
                     <div class="sidebar-links">
                         <a href="#"><i class="fa-regular fa-heart"></i> 위시리스트</a>
                         <a href="#"><i class="fa-solid fa-share-nodes"></i> 공유하기</a>
                     </div>
                 </div>
             </aside>
- 
+
         </section>
- 
+
     </main>
 
 
@@ -319,7 +329,7 @@
 
 
 
-    
+
 
 
     <!---FOOTER-->

@@ -522,22 +522,23 @@ body {
 }
 
 .footer-menu li {
-    margin-bottom: 0; 
+    margin-bottom: 0;
     cursor: pointer;
 }
 
 .footer-menu li a {
-    display: block;          
-    padding: 6px 0;         
+    display: block;
+    padding: 6px 0;
     text-decoration: none;
-    color: inherit;         
-    transition: 0.2s;      
+    color: inherit;
+    transition: 0.2s;
 }
+
 .footer-menu li a:hover {
     color: #691010;
     transform: translateY(-2px);
-    font-weight:bold;
-    opacity: 0.8;          
+    font-weight: bold;
+    opacity: 0.8;
 }
 
 /* 뉴스레터 */
@@ -574,7 +575,8 @@ body {
     cursor: pointer;
 
 }
-.footer-newsletter button:hover{
+
+.footer-newsletter button:hover {
     background: #691010;
 
 }
@@ -598,26 +600,26 @@ body {
     font-weight: bold;
     letter-spacing: 1px;
     /* 텍스트 정렬을 위해 추가 */
-    display: inline-block; 
+    display: inline-block;
     vertical-align: middle;
 }
 
 
 .footer-connect a {
-    display: inline-block;  
-    padding: 10px 15px;    
-    margin: 0 5px;        
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
     text-decoration: none;
     color: #272727;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
     vertical-align: middle;
 }
 
 .footer-connect a:hover {
-    color: #691010;        
-    transform: translateY(-2px); 
+    color: #691010;
+    transform: translateY(-2px);
     opacity: 0.8;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 /* 하단 */
