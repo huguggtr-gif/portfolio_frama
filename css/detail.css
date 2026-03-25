@@ -3,8 +3,7 @@
 
 @font-face {
   font-family: 'Pretendard';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2')
-    format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
 }
@@ -202,7 +201,7 @@ body {
   height: 100%;
   background: #fff;
   z-index: 2000;
-  transition: left 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   display: flex;
   flex-direction: column;
   box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
@@ -443,7 +442,8 @@ body {
 .thumb:hover {
   opacity: 1;
   outline: 1.5px solid #272727;
-  outline-offset: -1.5px;
+  border: 1.5px solid #272727;
+
 }
 
 .thumb img {
@@ -510,6 +510,15 @@ body {
   text-align: right;
   margin-bottom: 24px;
   font-family: 'Roboto Mono', monospace;
+}
+
+#qtyValue {
+  border: none;
+  outline: none;
+  background: transparent;
+  text-align: center;
+  width: 40px;
+  font-size: 14px;
 }
 
 /* 혜택정보 */
@@ -788,6 +797,7 @@ body {
   justify-content: flex-end;
   padding: 44px 48px;
 }
+
 .brand-hero-logo {
   width: 400px;
   display: block;
@@ -906,12 +916,10 @@ body {
 .series-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0.1) 55%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.1) 55%,
+      rgba(0, 0, 0, 0) 100%);
 
   display: flex;
   flex-direction: column;
@@ -1130,7 +1138,8 @@ body {
 .point-item:nth-child(even) {
   direction: rtl;
 }
-.point-item:nth-child(even) > * {
+
+.point-item:nth-child(even)>* {
   direction: ltr;
 }
 
@@ -1206,8 +1215,8 @@ body {
 
 /* 제목 */
 .point-title {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 30px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: clamp(24px, 2vw, 28px);
   font-weight: 700;
   line-height: 1.4;
   color: #272727;
@@ -1216,8 +1225,8 @@ body {
 
 /* 설명 */
 .point-desc {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 20px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: clamp(16px, 1.5vw, 18px);
   color: #888;
   line-height: 1.8;
   letter-spacing: 0.2px;
@@ -1286,6 +1295,230 @@ body {
 .spec-val {
   color: #272727;
   font-weight: 500;
+}
+
+/* ────────────────────────────────────────
+  point05 (적재 이미지)
+──────────────────────────────────────── */
+.detail-point05 {
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+.point05-image-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.point05-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.point05-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 60px 70px;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 0, 0, 0) 60%);
+}
+
+.point05-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.point05-tagline {
+  font-family: 'Pretendard', sans-serif;
+  font-size: clamp(24px, 2vw, 30px);
+  line-height: 1.8;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* ========================
+   OPTION SECTION
+======================== */
+.detail-options {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.opt-block {
+  background: #997A57;
+}
+
+/* 상단 헤더: PETIT ROND / OPTION */
+.opt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 70px 45px 100px 45px;
+}
+
+.opt-brand {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: clamp(30px, 2.5vw, 40px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.opt-option {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: clamp(24px, 2vw, 30px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+/* 서브헤더: 03 STOOL */
+.opt-subheader {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 40px 20px 40px;
+}
+
+.opt-title {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: clamp(40px, 4vw, 50px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+/* 구분선 */
+.opt-divider {
+  width: calc(100% - 80px);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 40px 0 40px;
+}
+
+/* 이미지 패딩 래퍼 */
+.opt-img-wrap {
+  padding: 100px 150px 100px 150px;
+  position: relative;
+}
+
+.opt-img-inner {
+  position: relative;
+  width: 100%;
+}
+
+.opt-img-inner img:first-child {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* 타원 레이블 이미지 */
+.opt-label-img {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 75px;
+  margin-bottom: 50px;
+}
+
+/* 씬 이미지 (패딩 없이 전체 너비) */
+.opt-scene-img {
+  width: 100%;
+}
+
+.opt-scene-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ========================
+   EVERYWHERE PERFECT
+======================== */
+.detail-everywhere {
+  width: 100%;
+
+}
+
+.everywhere-text {
+  background: #F3CF7A;
+  padding: 100px 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.everywhere-eyebrow {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #4c6ef5;
+}
+
+.everywhere-body {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.8;
+  color: #fff;
+}
+
+.everywhere-brand {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: #4c6ef5;
+}
+
+.everywhere-btn {
+  align-self: flex-end;
+  display: inline-block;
+  background: #4c6ef5;
+  color: #fff;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 36px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+.everywhere-btn:hover {
+  background: #691010;
+}
+
+.everywhere-video {
+  width: 100%;
+}
+
+.everywhere-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.description-img {
+  margin:100px 10px;
 }
 
 /* ========================
@@ -1520,6 +1753,7 @@ body {
   .product-bottom {
     grid-template-columns: 1fr 300px;
   }
+
   .point-text-wrap {
     padding: 40px 40px;
   }
@@ -1658,6 +1892,7 @@ body {
     min-height: 280px;
   }
 
+
   /* 모바일: 항상 이미지 위, 텍스트 아래 */
   .point-item:nth-child(even) .point-img-wrap {
     order: -1;
@@ -1676,13 +1911,54 @@ body {
     font-size: 18px;
   }
 
-  .option-row {
-    flex-wrap: wrap;
+  .point05-overlay {
+    padding: 30px 24px;
+  }
+
+  
+  .opt-brand {
+    font-size: 36px;
+  }
+
+  .opt-option {
+    font-size: 18px;
+  }
+
+  .opt-title {
+    font-size: 24px;
+  }
+
+  .opt-header {
+    padding: 30px 20px 0 20px;
+  }
+
+  .opt-subheader {
+    padding: 12px 20px 16px 20px;
+  }
+
+  .opt-divider {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+  }
+
+  .opt-img-wrap {
+    padding: 24px 20px 20px 20px;
   }
 
   .select-wrap {
     flex: 1 1 100%;
     order: 3;
+  }
+  .everywhere-text {
+    padding: 36px 20px;
+  }
+
+  .everywhere-body {
+    font-size: 16px;
+  }
+
+  .everywhere-brand {
+    font-size: 20px;
   }
 
   .footer .inner {
@@ -1716,6 +1992,7 @@ body {
    커서 미디어쿼리
 ======================== */
 @media (hover: hover) and (pointer: fine) {
+
   *,
   *::before,
   *::after {

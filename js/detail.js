@@ -103,38 +103,65 @@ document.querySelectorAll('.colour-swatches').forEach((group) => {
 ========================= */
 const UNIT_PRICE = 820000
 
-function setupQty(minusId, plusId, valueId, totalId) {
-  const minus = document.getElementById(minusId)
-  const plus = document.getElementById(plusId)
-  const valueEl = document.getElementById(valueId)
-  const totalEl = totalId ? document.getElementById(totalId) : null
+let qty = 1
 
-  if (!minus || !plus || !valueEl) return
+// 요소들 한 번에 가져오기
+const qtyDisplays = [
+  document.getElementById('qtyValue'),
+  document.getElementById('sideQtyValue')
+]
 
-  let qty = 1
+const totalDisplays = [
+  document.getElementById('totalPrice'),
+  document.getElementById('sideTotalPrice')
+]
 
-  function updateDisplay() {
-    valueEl.textContent = qty
-    if (totalEl) {
-      totalEl.textContent = (UNIT_PRICE * qty).toLocaleString('ko-KR') + '원'
-    }
-  }
+// 버튼들
+const minusBtns = [
+  document.getElementById('qtyMinus'),
+  document.getElementById('sideQtyMinus')
+]
 
-  minus.addEventListener('click', () => {
-    if (qty > 1) {
-      qty--
-      updateDisplay()
-    }
+const plusBtns = [
+  document.getElementById('qtyPlus'),
+  document.getElementById('sideQtyPlus')
+]
+
+// 화면 업데이트 함수
+function updateUI() {
+  qtyDisplays.forEach(el => {
+    if (el) el.textContent = qty
   })
 
-  plus.addEventListener('click', () => {
-    qty++
-    updateDisplay()
+  totalDisplays.forEach(el => {
+    if (el) {
+      el.textContent =
+        (UNIT_PRICE * qty).toLocaleString('ko-KR') + '원'
+    }
   })
 }
 
-setupQty('qtyMinus', 'qtyPlus', 'qtyValue', 'totalPrice')
-setupQty('sideQtyMinus', 'sideQtyPlus', 'sideQtyValue', null)
+// 이벤트 연결
+minusBtns.forEach(btn => {
+  if (!btn) return
+  btn.addEventListener('click', () => {
+    if (qty > 1) {
+      qty--
+      updateUI()
+    }
+  })
+})
+
+plusBtns.forEach(btn => {
+  if (!btn) return
+  btn.addEventListener('click', () => {
+    qty++
+    updateUI()
+  })
+})
+
+// 초기 실행
+updateUI()
 
 
 
