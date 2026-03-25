@@ -172,7 +172,9 @@ body {
   padding-bottom: 16px;
 }
 
-/*SIDE MENU*/
+/* ========================
+  SIDE MENU
+======================== */
 .overlay {
   position: fixed;
   top: 0;
@@ -191,7 +193,6 @@ body {
   visibility: visible;
 }
 
-/* 사이드 바 본체 */
 .side-menu {
   position: fixed;
   top: 0;
@@ -227,7 +228,6 @@ body {
   height: 20px;
 }
 
-/* 메인 메뉴 항목 */
 .side-menu-item {
   border-bottom: 1px solid #c3c2c2;
   list-style: none;
@@ -253,7 +253,6 @@ body {
   cursor: pointer;
 }
 
-/* 하위 메뉴 (아코디언) */
 .side-submenu {
   max-height: 0;
   overflow: hidden;
@@ -281,7 +280,6 @@ body {
   background: #f0f0f0;
 }
 
-/* 파란색 로고 박스 */
 .side-menu .logo01 {
   height: 60px;
   background-color: #4c6ef5;
@@ -347,7 +345,6 @@ body {
 ======================== */
 .detail-main {
   padding-top: 90px;
-  /* header 높이 보정 */
 }
 
 /* 브레드크럼 */
@@ -443,7 +440,6 @@ body {
   opacity: 1;
   outline: 1.5px solid #272727;
   border: 1.5px solid #272727;
-
 }
 
 .thumb img {
@@ -577,7 +573,7 @@ body {
   margin: 20px 0;
 }
 
-/* 옵션 행: 색상 + 드롭다운 + 수량 */
+/* 옵션 행 */
 .option-row {
   display: flex;
   align-items: center;
@@ -593,12 +589,9 @@ body {
 .swatch {
   width: 30px;
   height: 30px;
-
   border: 2px solid transparent;
   cursor: pointer;
-  transition:
-    border-color 0.2s,
-    transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s;
   outline: none;
 }
 
@@ -709,9 +702,7 @@ body {
   font-size: 12px;
   letter-spacing: 0.5px;
   cursor: pointer;
-  transition:
-    background 0.2s,
-    color 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 
 .btn-cart:hover {
@@ -734,11 +725,10 @@ body {
 }
 
 /* ========================
-  하단 구역 (동영상 + 사이드바)
+  하단 구역 (사이드바 포함)
 ======================== */
 .product-bottom {
   border-top: 3px solid #272727;
-  /* 상단과의 구분선 */
   display: grid;
   grid-template-columns: 1fr 340px;
   gap: 0;
@@ -749,13 +739,14 @@ body {
   align-items: start;
 }
 
-/* ────────────────────────────────────────
-동영상-브랜드소개
-──────────────────────────────────────── */
 .bottom-left {
   padding-top: 60px;
+  min-width: 0; /* 그리드 자식이 넘치지 않도록 */
 }
 
+/* ────────────────────────────────────────
+  동영상
+──────────────────────────────────────── */
 .video-wrap {
   position: relative;
   width: 100%;
@@ -774,8 +765,32 @@ body {
   border: none;
 }
 
+.detail-video {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.detail-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.delivery {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.delivery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ────────────────────────────────────────
-상세01-브랜드소개
+  브랜드소개
 ──────────────────────────────────────── */
 .brand-hero {
   position: relative;
@@ -821,7 +836,7 @@ body {
 }
 
 /* ────────────────────────────────────────
-  상세02-디자이너소개
+  디자이너소개
 ──────────────────────────────────────── */
 .detail-designer {
   background: #8b7355;
@@ -882,23 +897,7 @@ body {
 }
 
 /* ────────────────────────────────────────
-  비디오01 섹션
-──────────────────────────────────────── */
-
-.detail-video {
-  width: 100%;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.detail-video video {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ────────────────────────────────────────
-  상세03 series
+  series
 ──────────────────────────────────────── */
 .series-image-wrap {
   position: relative;
@@ -920,7 +919,6 @@ body {
       rgba(0, 0, 0, 0.5) 0%,
       rgba(0, 0, 0, 0.1) 55%,
       rgba(0, 0, 0, 0) 100%);
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -949,7 +947,7 @@ body {
 
 .series-chair-title {
   font-family: 'Roboto Mono', monospace;
-  font-size: 50px;
+  font-size: clamp(24px, 4vw, 50px);
   font-weight: 700;
   color: #fff;
   letter-spacing: 1px;
@@ -957,14 +955,14 @@ body {
 
 .series-tagline {
   font-family: 'Pretendard', sans-serif;
-  font-size: 40px;
+  font-size: clamp(20px, 3vw, 40px);
   font-weight: 700;
   color: #fff;
 }
 
 .series-desc {
   font-family: 'Pretendard', sans-serif;
-  font-size: 26px;
+  font-size: clamp(16px, 2vw, 26px);
   line-height: 1.8;
   font-weight: 500;
   margin-top: 50px;
@@ -972,15 +970,19 @@ body {
 }
 
 /* ────────────────────────────────────────
-  상세04-공간01
+  공간 이미지들 (공통 구조)
 ──────────────────────────────────────── */
-.space01-image-wrap {
+.space01-image-wrap,
+.space02-image-wrap,
+.space03-image-wrap {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-.space01-full-img {
+.space01-full-img,
+.space02-full-img,
+.space03-full-img {
   width: 100%;
   height: auto;
   display: block;
@@ -994,46 +996,7 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  padding: 90px 90px;
-}
-
-.space01-text-block {
-  display: flex;
-  flex-direction: column;
-  margin-top: 100px;
-}
-
-.space01-tagline {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 40px;
-  line-height: 1.2;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.space01-desc {
-  font-family: 'Pretendard', sans-serif;
-  font-size: 40px;
-  line-height: 1.8;
-  font-weight: 700;
-  margin-top: 20px;
-  color: rgba(255, 255, 255, 0.82);
-}
-
-/* ────────────────────────────────────────
-  상세05-공간02
-──────────────────────────────────────── */
-.space02-image-wrap {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.space02-full-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+  padding: 60px 60px;
 }
 
 .space02-overlay {
@@ -1044,45 +1007,7 @@ body {
   justify-content: flex-end;
   align-items: flex-end;
   text-align: end;
-  padding: 90px 90px;
-}
-
-.space02-text-block {
-  display: flex;
-  flex-direction: column;
-  margin-top: 100px;
-}
-
-.space02-tagline {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 40px;
-  line-height: 1.8;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.space02-desc {
-  font-family: 'Pretendard', sans-serif;
-  font-size: 40px;
-  line-height: 1.8;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.82);
-}
-
-/* ────────────────────────────────────────
-  상세06-공간03
-──────────────────────────────────────── */
-.space03-image-wrap {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.space03-full-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+  padding: 60px 60px;
 }
 
 .space03-overlay {
@@ -1092,32 +1017,47 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  padding: 90px 90px;
+  padding: 60px 60px;
 }
 
+.space01-text-block,
+.space02-text-block,
 .space03-text-block {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
 }
 
+.space01-tagline,
 .space03-tagline {
   font-family: 'Roboto Mono', monospace;
-  font-size: 40px;
-  line-height: 1.8;
+  font-size: clamp(22px, 3vw, 40px);
+  line-height: 1.2;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
+.space02-tagline {
+  font-family: 'Roboto Mono', monospace;
+  font-size: clamp(22px, 3vw, 40px);
+  line-height: 1.8;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.space01-desc,
+.space02-desc,
 .space03-desc {
   font-family: 'Pretendard', sans-serif;
-  font-size: 40px;
+  font-size: clamp(18px, 2.5vw, 40px);
   line-height: 1.8;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.82);
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.85);
 }
 
-/* ===== POINT SECTION ===== */
+/* ========================
+  POINT SECTION
+======================== */
 .detail-points {
   width: 100%;
   padding: 0;
@@ -1134,16 +1074,14 @@ body {
   position: relative;
 }
 
-/* 짝수 아이템은 이미지-텍스트 반전 */
 .point-item:nth-child(even) {
   direction: rtl;
 }
 
-.point-item:nth-child(even)>* {
+.point-item:nth-child(even) > * {
   direction: ltr;
 }
 
-/* 이미지 영역 */
 .point-img-wrap {
   width: 100%;
   height: 100%;
@@ -1165,9 +1103,8 @@ body {
   transform: scale(1.04);
 }
 
-/* 텍스트 영역 */
 .point-text-wrap {
-  padding: 120px 70px 0px 70px;
+  padding: 120px 70px 0 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1188,13 +1125,12 @@ body {
   margin-left: auto;
 }
 
-/* 넘버 + POINT */
 .point-label {
   display: flex;
   align-items: baseline;
   gap: 10px;
   font-family: 'Roboto Mono', sans-serif;
-  font-size: 40px;
+  font-size: clamp(24px, 3vw, 40px);
   font-weight: 700;
   letter-spacing: 2px;
   color: #272727;
@@ -1202,10 +1138,9 @@ body {
 
 .point-label span {
   color: #691010;
-  font-size: 40px;
+  font-size: clamp(24px, 3vw, 40px);
 }
 
-/* 구분선 */
 .point-divider {
   width: 80px;
   height: 2px;
@@ -1213,88 +1148,28 @@ body {
   flex-shrink: 0;
 }
 
-/* 제목 */
 .point-title {
   font-family: 'Pretendard', sans-serif;
-  font-size: clamp(24px, 2vw, 28px);
+  font-size: clamp(18px, 2vw, 28px);
   font-weight: 700;
   line-height: 1.4;
   color: #272727;
   letter-spacing: -0.3px;
 }
 
-/* 설명 */
 .point-desc {
   font-family: 'Pretendard', sans-serif;
-  font-size: clamp(16px, 1.5vw, 18px);
+  font-size: clamp(14px, 1.5vw, 18px);
   color: #888;
   line-height: 1.8;
   letter-spacing: 0.2px;
 }
 
-/* 하단 구분선 (포인트 섹션 전체 마무리) */
 .detail-points-end {
   width: 100%;
   height: 1px;
   background: #e5e5e5;
   margin: 0;
-}
-
-/* 상세 설명 */
-.detail-description {
-  padding: 60px 0 0;
-  border-top: 1px solid #e8e8e8;
-  margin-top: 60px;
-}
-
-.desc-block {
-  margin-bottom: 50px;
-}
-
-.desc-heading {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #272727;
-  margin-bottom: 18px;
-  padding-bottom: 10px;
-}
-
-.desc-block p {
-  font-size: 14px;
-  line-height: 1.8;
-  color: #272727;
-  margin-bottom: 12px;
-}
-
-.desc-block p:last-child {
-  margin-bottom: 0;
-}
-
-/* 스펙 테이블 */
-.spec-table {
-  display: flex;
-  flex-direction: column;
-}
-
-.spec-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #272727;
-  font-size: 13px;
-}
-
-.spec-key {
-  font-weight: 500;
-  color: #272727;
-}
-
-.spec-val {
-  color: #272727;
-  font-weight: 500;
 }
 
 /* ────────────────────────────────────────
@@ -1340,185 +1215,78 @@ body {
 
 .point05-tagline {
   font-family: 'Pretendard', sans-serif;
-  font-size: clamp(24px, 2vw, 30px);
+  font-size: clamp(14px, 1.6vw, 20px);
   line-height: 1.8;
-  font-weight: 600;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.92);
 }
 
 /* ========================
-   OPTION SECTION
+  상세 설명 (스펙 테이블)
 ======================== */
-.detail-options {
-  width: 100%;
+.detail-description {
+  padding: 60px 0 0;
+  border-top: 1px solid #e8e8e8;
   margin-top: 60px;
 }
 
-.opt-block {
-  background: #997A57;
+.description-img {
+  margin: 60px 0;
 }
 
-/* 상단 헤더: PETIT ROND / OPTION */
-.opt-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 70px 45px 100px 45px;
-}
-
-.opt-brand {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: clamp(30px, 2.5vw, 40px);
-  font-weight: 700;
-  color: #fff;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-.opt-option {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: clamp(24px, 2vw, 30px);
-  font-weight: 700;
-  color: #fff;
-  line-height: 1;
-  letter-spacing: 2px;
-}
-
-/* 서브헤더: 03 STOOL */
-.opt-subheader {
-  display: flex;
-  justify-content: flex-end;
-  padding: 16px 40px 20px 40px;
-}
-
-.opt-title {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: clamp(40px, 4vw, 50px);
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 1px;
-  line-height: 1;
-}
-
-/* 구분선 */
-.opt-divider {
-  width: calc(100% - 80px);
-  height: 1px;
-  background: rgba(255, 255, 255, 0.5);
-  margin: 0 40px 0 40px;
-}
-
-/* 이미지 패딩 래퍼 */
-.opt-img-wrap {
-  padding: 100px 150px 100px 150px;
-  position: relative;
-}
-
-.opt-img-inner {
-  position: relative;
-  width: 100%;
-}
-
-.opt-img-inner img:first-child {
+.description-img img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
 }
 
-/* 타원 레이블 이미지 */
-.opt-label-img {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: auto;
-  height: 75px;
+.desc-block {
   margin-bottom: 50px;
 }
 
-/* 씬 이미지 (패딩 없이 전체 너비) */
-.opt-scene-img {
-  width: 100%;
-}
-
-.opt-scene-img img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* ========================
-   EVERYWHERE PERFECT
-======================== */
-.detail-everywhere {
-  width: 100%;
-
-}
-
-.everywhere-text {
-  background: #F3CF7A;
-  padding: 100px 70px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.everywhere-eyebrow {
+.desc-heading {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #4c6ef5;
+  text-transform: uppercase;
+  color: #272727;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
 }
 
-.everywhere-body {
-  font-family: 'Pretendard', sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 1.8;
-  color: #fff;
-}
-
-.everywhere-brand {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 28px;
-  font-weight: 900;
-  color: #4c6ef5;
-}
-
-.everywhere-btn {
-  align-self: flex-end;
-  display: inline-block;
-  background: #4c6ef5;
-  color: #fff;
-  font-family: 'Pretendard', sans-serif;
+.desc-block p {
   font-size: 14px;
-  font-weight: 600;
-  padding: 14px 36px;
-  border-radius: 999px;
-  text-decoration: none;
-  transition: background 0.2s;
-  margin-top: 8px;
+  line-height: 1.8;
+  color: #272727;
+  margin-bottom: 12px;
 }
 
-.everywhere-btn:hover {
-  background: #691010;
+.desc-block p:last-child {
+  margin-bottom: 0;
 }
 
-.everywhere-video {
-  width: 100%;
+.spec-table {
+  display: flex;
+  flex-direction: column;
 }
 
-.everywhere-video video {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #272727;
+  font-size: 13px;
 }
-.description-img {
-  margin:100px 10px;
+
+.spec-key {
+  font-weight: 500;
+  color: #272727;
+}
+
+.spec-val {
+  color: #272727;
+  font-weight: 500;
 }
 
 /* ========================
@@ -1527,7 +1295,6 @@ body {
 .bottom-sidebar {
   position: sticky;
   top: 110px;
-  /* header 높이 + 여유 */
   padding-top: 60px;
 }
 
@@ -1591,10 +1358,8 @@ body {
 
 .sidebar-qty .qty-control {
   width: 120px;
-  /* ← 너비 고정 */
 }
 
-/* 사이드바 총 가격 행 */
 .sidebar-total-row {
   display: flex;
   justify-content: space-between;
@@ -1608,6 +1373,171 @@ body {
   font-size: 1rem;
   font-weight: 700;
   color: #4c6ef5;
+}
+
+/* ========================
+  OPTION SECTION
+  (product-bottom 밖으로 꺼낸 경우 max-width 맞춤)
+======================== */
+.detail-options {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.opt-block {
+  background: #997A57;
+}
+
+.opt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 70px 45px 100px 45px;
+}
+
+.opt-brand {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: clamp(28px, 4vw, 60px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.opt-option {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: clamp(18px, 2.5vw, 30px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+.opt-subheader {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 40px 20px 40px;
+}
+
+.opt-title {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: clamp(28px, 4vw, 50px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.opt-divider {
+  width: calc(100% - 80px);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 40px;
+}
+
+.opt-img-wrap {
+  padding: 60px 10% 60px 10%;
+  position: relative;
+}
+
+.opt-img-inner {
+  position: relative;
+  width: 100%;
+}
+
+.opt-img-inner img:first-child {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.opt-label-img {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: 60px;
+}
+
+.opt-scene-img {
+  width: 100%;
+}
+
+.opt-scene-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ========================
+  EVERYWHERE PERFECT
+======================== */
+.detail-everywhere {
+  width: 100%;
+}
+
+.everywhere-text {
+  background: #F3CF7A;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.everywhere-eyebrow {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #4c6ef5;
+}
+
+.everywhere-body {
+  font-family: 'Pretendard', sans-serif;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 700;
+  line-height: 1.8;
+  color: #fff;
+}
+
+.everywhere-brand {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 900;
+  color: #4c6ef5;
+}
+
+.everywhere-btn {
+  align-self: flex-end;
+  display: inline-block;
+  background: #4c6ef5;
+  color: #fff;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 36px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+.everywhere-btn:hover {
+  background: #3a5ce0;
+}
+
+.everywhere-video {
+  width: 100%;
+}
+
+.everywhere-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 /* ========================
@@ -1743,7 +1673,7 @@ body {
 }
 
 /* ========================
-   반응형
+  반응형 — 1200px
 ======================== */
 @media (max-width: 1200px) {
   .product-top {
@@ -1757,8 +1687,19 @@ body {
   .point-text-wrap {
     padding: 40px 40px;
   }
+
+  .point-item:nth-child(odd) .point-text-wrap {
+    padding-left: 40px;
+  }
+
+  .opt-img-wrap {
+    padding: 50px 6%;
+  }
 }
 
+/* ========================
+  반응형 — 1024px
+======================== */
 @media (max-width: 1024px) {
   .product-top {
     grid-template-columns: 1fr;
@@ -1771,13 +1712,13 @@ body {
 
   .product-bottom {
     grid-template-columns: 1fr;
+    padding: 0 40px 80px;
   }
 
   .bottom-sidebar {
     position: static;
-    padding-top: 0;
-    border-top: 1px solid #e8e8e8;
     padding-top: 40px;
+    border-top: 1px solid #e8e8e8;
   }
 
   .footer-top {
@@ -1788,9 +1729,21 @@ body {
   .footer-newsletter {
     grid-column: span 2;
   }
+
+  .detail-points {
+    margin-top: 80px;
+  }
+
+  .opt-img-wrap {
+    padding: 40px 5%;
+  }
 }
 
+/* ========================
+  반응형 — 768px
+======================== */
 @media (max-width: 768px) {
+  /* 헤더 */
   .header-center {
     display: none;
   }
@@ -1829,39 +1782,7 @@ body {
     font-size: 17px;
   }
 
-  .brand-hero-overlay {
-    padding: 24px 20px;
-  }
-
-  .brand-hero-text {
-    font-size: 12px;
-  }
-
-  .detail-designer {
-    padding: 40px 20px;
-  }
-
-  .designer-main-title {
-    font-size: 18px;
-  }
-
-  .designer-body {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .series-overlay {
-    padding: 20px 20px;
-  }
-
-  .series-chair-title {
-    font-size: 18px;
-  }
-
-  .series-tagline {
-    font-size: 14px;
-  }
-
+  /* 메인 */
   .detail-main {
     padding-top: 60px;
   }
@@ -1879,6 +1800,69 @@ body {
     grid-template-columns: 1fr;
   }
 
+  /* 브랜드 */
+  .brand-hero-overlay {
+    padding: 20px;
+  }
+
+  .brand-hero-logo {
+    width: 160px;
+  }
+
+  .brand-hero-text {
+    font-size: 12px;
+    margin: 0 0 10px 0;
+  }
+
+  /* 디자이너 */
+  .detail-designer {
+    padding: 40px 20px;
+  }
+
+  .designer-main-title {
+    font-size: 18px;
+  }
+
+  .designer-sub-title {
+    font-size: 14px;
+  }
+
+  .designer-body {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .designer-copy p {
+    font-size: 14px;
+  }
+
+  /* 시리즈 */
+  .series-overlay {
+    padding: 20px;
+  }
+
+  .series-badge-img {
+    margin-top: 40px;
+    height: 40px;
+  }
+
+  .series-text-block {
+    margin-top: 30px;
+    gap: 10px;
+  }
+
+  /* 공간 이미지 */
+  .space01-overlay,
+  .space02-overlay,
+  .space03-overlay {
+    padding: 20px;
+  }
+
+  /* 포인트 섹션 */
+  .detail-points {
+    margin-top: 40px;
+  }
+
   .point-item {
     grid-template-columns: 1fr;
     min-height: auto;
@@ -1888,52 +1872,46 @@ body {
     direction: ltr;
   }
 
-  .point-img-wrap {
-    min-height: 280px;
-  }
-
-
-  /* 모바일: 항상 이미지 위, 텍스트 아래 */
   .point-item:nth-child(even) .point-img-wrap {
     order: -1;
   }
 
+  .point-img-wrap {
+    min-height: 260px;
+    margin-bottom: 0;
+  }
+
   .point-text-wrap {
-    padding: 36px 24px;
-    gap: 14px;
+    padding: 30px 20px;
+    gap: 12px;
+    text-align: left !important;
   }
 
-  .point-label {
-    font-size: 22px;
+  .point-item:nth-child(odd) .point-text-wrap {
+    padding-left: 20px;
+    text-align: left;
   }
 
-  .point-title {
-    font-size: 18px;
+  .point-item:nth-child(odd) .point-label {
+    justify-content: flex-start;
   }
 
+  .point-item:nth-child(odd) .point-divider {
+    margin-left: 0;
+  }
+
+  /* point05 */
   .point05-overlay {
-    padding: 30px 24px;
+    padding: 24px 20px;
   }
 
-  
-  .opt-brand {
-    font-size: 36px;
-  }
-
-  .opt-option {
-    font-size: 18px;
-  }
-
-  .opt-title {
-    font-size: 24px;
-  }
-
+  /* 옵션 섹션 */
   .opt-header {
-    padding: 30px 20px 0 20px;
+    padding: 30px 20px 40px 20px;
   }
 
   .opt-subheader {
-    padding: 12px 20px 16px 20px;
+    padding: 0 20px 16px 20px;
   }
 
   .opt-divider {
@@ -1942,25 +1920,39 @@ body {
   }
 
   .opt-img-wrap {
-    padding: 24px 20px 20px 20px;
+    padding: 24px 20px;
+  }
+
+  .opt-label-img {
+    height: 44px;
+  }
+
+  /* everywhere */
+  .everywhere-text {
+    padding: 40px 20px;
+  }
+
+  /* 구매 옵션 */
+  .option-row {
+    flex-wrap: wrap;
   }
 
   .select-wrap {
     flex: 1 1 100%;
     order: 3;
   }
-  .everywhere-text {
-    padding: 36px 20px;
+
+  /* 사이드메뉴 */
+  .side-menu {
+    width: 100%;
+    max-width: 100%;
   }
 
-  .everywhere-body {
-    font-size: 16px;
+  .close-btn {
+    padding: 20px 25px;
   }
 
-  .everywhere-brand {
-    font-size: 20px;
-  }
-
+  /* 푸터 */
   .footer .inner {
     padding: 0 20px;
   }
@@ -1976,23 +1968,14 @@ body {
 
   .footer-newsletter {
     max-width: 100%;
-  }
-
-  .side-menu {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .close-btn {
-    padding: 20px 25px;
+    grid-column: span 1;
   }
 }
 
 /* ========================
-   커서 미디어쿼리
+  커서 미디어쿼리
 ======================== */
 @media (hover: hover) and (pointer: fine) {
-
   *,
   *::before,
   *::after {
