@@ -741,7 +741,8 @@ body {
 
 .bottom-left {
   padding-top: 60px;
-  min-width: 0; /* 그리드 자식이 넘치지 않도록 */
+  min-width: 0;
+  /* 그리드 자식이 넘치지 않도록 */
 }
 
 /* ────────────────────────────────────────
@@ -943,6 +944,7 @@ body {
   flex-direction: column;
   gap: 20px;
   margin-top: 100px;
+  margin-bottom: 30px;
 }
 
 .series-chair-title {
@@ -1078,7 +1080,7 @@ body {
   direction: rtl;
 }
 
-.point-item:nth-child(even) > * {
+.point-item:nth-child(even)>* {
   direction: ltr;
 }
 
@@ -1397,7 +1399,7 @@ body {
 
 .opt-brand {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: clamp(28px, 4vw, 60px);
+  font-size: clamp(22px, 4vw, 60px);
   font-weight: 700;
   color: #fff;
   line-height: 1;
@@ -1421,7 +1423,7 @@ body {
 
 .opt-title {
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: clamp(28px, 4vw, 50px);
+  font-size: clamp(24px, 4vw, 50px);
   font-weight: 700;
   color: #fff;
   letter-spacing: 1px;
@@ -1743,6 +1745,7 @@ body {
   반응형 — 768px
 ======================== */
 @media (max-width: 768px) {
+
   /* 헤더 */
   .header-center {
     display: none;
@@ -1801,13 +1804,15 @@ body {
   }
 
   /* 브랜드 */
-  .brand-hero-overlay {
-    padding: 20px;
+  .brand-hero-logo {
+    width: 120px;
+    margin-bottom: 8px;
   }
 
-  .brand-hero-logo {
-    width: 160px;
-    margin-top:30px;
+  .brand-hero-overlay {
+    justify-content: flex-end;
+    /* 하단 정렬 유지 */
+    padding: 20px;
   }
 
   .brand-hero-text {
@@ -1843,14 +1848,13 @@ body {
   }
 
   .series-badge-img {
-    margin-top: 40px;
+    margin-top: 20px;
     height: 40px;
   }
 
   .series-text-block {
-    margin-top: 20px;
-    margin-bottom:30px;
-    gap: 10px;
+    margin-top: 0px;
+    gap: 8px;
   }
 
   /* 공간 이미지 */
@@ -1926,7 +1930,7 @@ body {
   }
 
   .opt-label-img {
-    height: 44px;
+    height: 30px;
   }
 
   /* everywhere */
@@ -1978,6 +1982,7 @@ body {
   커서 미디어쿼리
 ======================== */
 @media (hover: hover) and (pointer: fine) {
+
   *,
   *::before,
   *::after {
