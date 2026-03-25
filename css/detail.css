@@ -1807,6 +1807,7 @@ body {
 
   .brand-hero-logo {
     width: 160px;
+    margin-top:30px;
   }
 
   .brand-hero-text {
@@ -1847,7 +1848,8 @@ body {
   }
 
   .series-text-block {
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom:30px;
     gap: 10px;
   }
 
