@@ -742,7 +742,6 @@ body {
 .bottom-left {
   padding-top: 60px;
   min-width: 0;
-  /* 그리드 자식이 넘치지 않도록 */
 }
 
 /* ────────────────────────────────────────
@@ -777,7 +776,6 @@ body {
   height: auto;
   display: block;
 }
-
 
 .delivery {
   width: 100%;
@@ -1379,7 +1377,6 @@ body {
 
 /* ========================
   OPTION SECTION
-  (product-bottom 밖으로 꺼낸 경우 max-width 맞춤)
 ======================== */
 .detail-options {
   width: 100%;
@@ -1742,11 +1739,11 @@ body {
 }
 
 /* ========================
-  반응형 — 768px
+  반응형 — 768px  ★ 핵심 수정 영역
 ======================== */
 @media (max-width: 768px) {
 
-  /* 헤더 */
+  /* ── 헤더 ── */
   .header-center {
     display: none;
   }
@@ -1785,25 +1782,106 @@ body {
     font-size: 17px;
   }
 
-  /* 메인 */
+  /* ── 메인 패딩 (헤더 60px 기준) ── */
   .detail-main {
     padding-top: 60px;
   }
 
   .breadcrumb {
-    padding: 12px 20px;
+    padding: 12px 16px;
+    font-size: 11px;
+    gap: 6px;
   }
 
+  /* ── product-top: 세로 1컬럼 ── */
   .product-top {
-    padding: 30px 20px;
-  }
-
-  .product-bottom {
-    padding: 0 20px 60px;
     grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 24px 16px;
   }
 
-  /* 브랜드 */
+  /* ── 갤러리: 썸네일을 하단으로 ── */
+  .product-gallery {
+    flex-direction: column-reverse;  /* 메인 위, 썸네일 아래 */
+    gap: 10px;
+  }
+
+  .gallery-main {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .gallery-thumbs {
+    flex-direction: row;             /* 가로 나열 */
+    width: 100%;
+    overflow-x: auto;
+    gap: 8px;
+    /* 스크롤바 숨김 */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .gallery-thumbs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .thumb {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
+  }
+
+  /* ── 상품 정보 ── */
+  .product-title {
+    font-size: 1rem;
+  }
+
+  .product-price {
+    font-size: 1.2rem;
+  }
+
+  /* ── 옵션 행 ── */
+  .option-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .colour-swatches {
+    flex: 0 0 auto;
+  }
+
+  .select-wrap {
+    flex: 1 1 100%;
+    order: 3;
+  }
+
+  .qty-control {
+    flex: 0 0 auto;
+  }
+
+  /* ── product-bottom: 1컬럼, 패딩 통일 ── */
+  .product-bottom {
+    grid-template-columns: 1fr;
+    padding: 0 16px 60px;
+  }
+
+  .bottom-left {
+    padding-top: 40px;
+    /* 전체 너비 보장 */
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* ── 사이드바: static으로 맨 아래 배치 ── */
+  .bottom-sidebar {
+    position: static;
+    padding-top: 30px;
+    border-top: 1px solid #e8e8e8;
+    width: 100%;
+  }
+
+  /* ── 브랜드 ── */
   .brand-hero-logo {
     width: 120px;
     margin-bottom: 8px;
@@ -1811,18 +1889,18 @@ body {
 
   .brand-hero-overlay {
     justify-content: flex-end;
-    /* 하단 정렬 유지 */
     padding: 20px;
   }
 
   .brand-hero-text {
-    font-size: 12px;
-    margin: 0 0 10px 0;
+    font-size: 11px;
+    line-height: 1.7;
+    margin: 0 0 8px 0;
   }
 
-  /* 디자이너 */
+  /* ── 디자이너 ── */
   .detail-designer {
-    padding: 40px 20px;
+    padding: 40px 16px;
   }
 
   .designer-main-title {
@@ -1842,29 +1920,30 @@ body {
     font-size: 14px;
   }
 
-  /* 시리즈 */
+  /* ── 시리즈 오버레이 ── */
   .series-overlay {
-    padding: 20px;
+    padding: 16px;
   }
 
   .series-badge-img {
-    margin-top: 20px;
-    height: 40px;
+    margin-top: 16px;
+    height: 36px;
   }
 
   .series-text-block {
-    margin-top: 0px;
-    gap: 8px;
+    margin-top: 12px;
+    margin-bottom: 0;
+    gap: 6px;
   }
 
-  /* 공간 이미지 */
+  /* ── 공간 이미지 오버레이 ── */
   .space01-overlay,
   .space02-overlay,
   .space03-overlay {
-    padding: 20px;
+    padding: 16px;
   }
 
-  /* 포인트 섹션 */
+  /* ── POINT 섹션 ── */
   .detail-points {
     margin-top: 40px;
   }
@@ -1872,30 +1951,37 @@ body {
   .point-item {
     grid-template-columns: 1fr;
     min-height: auto;
+    direction: ltr !important;   /* rtl 오버라이드 */
   }
 
   .point-item:nth-child(even) {
     direction: ltr;
   }
 
+  /* 짝수 아이템: 이미지를 항상 위로 */
   .point-item:nth-child(even) .point-img-wrap {
     order: -1;
   }
 
   .point-img-wrap {
-    min-height: 260px;
-    margin-bottom: 0;
+    width: 100%;
+    min-height: 240px;
+    max-height: 260px;
+    margin-bottom: 0;            /* 100px → 0 */
+  }
+
+  .point-img-wrap img {
+    height: 100%;
   }
 
   .point-text-wrap {
-    padding: 30px 20px;
+    padding: 28px 16px !important;  /* 좌우 padding 모두 초기화 */
     gap: 12px;
     text-align: left !important;
   }
 
   .point-item:nth-child(odd) .point-text-wrap {
-    padding-left: 20px;
-    text-align: left;
+    padding-left: 16px !important;
   }
 
   .point-item:nth-child(odd) .point-label {
@@ -1906,49 +1992,43 @@ body {
     margin-left: 0;
   }
 
-  /* point05 */
+  /* ── point05 ── */
   .point05-overlay {
-    padding: 24px 20px;
+    padding: 20px 16px;
   }
 
-  /* 옵션 섹션 */
+  /* ── 옵션 섹션 ── */
   .opt-header {
-    padding: 30px 20px 40px 20px;
+    padding: 30px 16px 40px 16px;
   }
 
   .opt-subheader {
-    padding: 0 20px 16px 20px;
+    padding: 0 16px 16px 16px;
   }
 
   .opt-divider {
-    width: calc(100% - 40px);
-    margin: 0 20px;
+    width: calc(100% - 32px);
+    margin: 0 16px;
   }
 
   .opt-img-wrap {
-    padding: 24px 20px;
+    padding: 24px 16px;
   }
 
   .opt-label-img {
-    height: 30px;
+    height: 28px;
   }
 
-  /* everywhere */
+  /* ── everywhere ── */
   .everywhere-text {
-    padding: 40px 20px;
+    padding: 40px 16px;
   }
 
-  /* 구매 옵션 */
-  .option-row {
-    flex-wrap: wrap;
+  .everywhere-btn {
+    align-self: flex-start;
   }
 
-  .select-wrap {
-    flex: 1 1 100%;
-    order: 3;
-  }
-
-  /* 사이드메뉴 */
+  /* ── 사이드 메뉴 ── */
   .side-menu {
     width: 100%;
     max-width: 100%;
@@ -1958,9 +2038,9 @@ body {
     padding: 20px 25px;
   }
 
-  /* 푸터 */
+  /* ── 푸터 ── */
   .footer .inner {
-    padding: 0 20px;
+    padding: 0 16px;
   }
 
   .footer-menu,
