@@ -235,11 +235,12 @@ body {
 }
 
 .side-menu-item:hover {
-  background-color: #f9f9f9;
+   color: #fff;
+    background: #691010;
 }
 
 .side-menu-item:hover .side-menu-link {
-  color: #272727;
+  color: #fff;
 }
 
 .side-menu-link {
@@ -276,8 +277,8 @@ body {
 }
 
 .side-submenu li a:hover {
-  color: #111;
-  background: #f0f0f0;
+   color: #fff;
+    background: #691010;
 }
 
 .side-menu .logo01 {
@@ -768,7 +769,7 @@ body {
 .detail-video {
   width: 100%;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .detail-video video {
@@ -779,7 +780,7 @@ body {
 
 .delivery {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .delivery img {

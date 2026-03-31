@@ -26,7 +26,6 @@ body {
 
 /* 마우스커서변경 */
 
-
 .cursor-dot {
     width: 40px;
     height: 40px;
@@ -44,7 +43,6 @@ body {
         width 0.3s ease,
         height 0.3s ease;
 }
-
 
 .cursor-active {
     transform: translate(-50%, -50%) scale(0.4) !important;
@@ -74,8 +72,6 @@ body {
     position: relative;
     column-gap: 40px;
 }
-
-
 
 .header-left {
     display: flex;
@@ -204,29 +200,71 @@ body {
 }
 
 
-/* MAIN */
+/* =====================
+   MAIN VISUAL + SLIDER
+   ===================== */
 
 .main-visual {
+    position: relative;
     width: 100%;
     height: 90vh;
-    background: url('../img/main.png') no-repeat center center;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* 슬라이드 이미지 레이어 */
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* 텍스트 레이어 — .inner 대신 전용 클래스 사용 */
+.main-text-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    pointer-events: none;
     display: flex;
     align-items: center;
-    padding: 0 200px;
+    padding: 0 120px;
 }
 
 .main-content {
-    max-width: 730px;
-    color: #fff;
-    margin-top: 80px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+    pointer-events: auto;
 }
 
-
-
+.main-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 .series-title {
     font-family: 'Roboto Mono', sans-serif;
+    color: #fff;
     font-size: 65px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -239,6 +277,7 @@ body {
 
 .series-txt {
     font-family: 'Roboto Mono', sans-serif;
+    color: #fff;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 40px;
@@ -268,6 +307,7 @@ body {
     background: #272727;
     color: #fff !important;
 }
+
 
 /* 공통 inner 정렬 */
 .inner {
@@ -336,7 +376,6 @@ body {
     border: 1px solid #C3C2C2;
 }
 
-
 .category-item:hover .base-img {
     opacity: 0;
 }
@@ -347,12 +386,10 @@ body {
     letter-spacing: 0.5px;
 }
 
-
 .category-item p {
     font-size: 16px;
     font-family: 'Roboto Mono', sans-serif;
     font-weight: 500;
-
 }
 
 .category-item:hover p {
@@ -377,14 +414,12 @@ body {
     cursor: pointer;
 }
 
-
 .content-wrap img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.8s ease;
 }
-
 
 .content-wrap>div:hover img {
     transform: scale(1.08);
@@ -397,14 +432,12 @@ body {
     width: 80%;
     color: #fff;
     z-index: 2;
-
     opacity: 1;
     transform: translateY(0);
 }
 
 /* 마우스 있는 PC에서만 hover 효과 */
 @media (hover: hover) and (pointer: fine) {
-
     .contxt {
         opacity: 0;
         transform: translateY(30px);
@@ -415,7 +448,6 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
 .content-wrap>div::after {
@@ -430,12 +462,9 @@ body {
     background: rgba(0, 0, 0, 0.35);
 }
 
-
 .contxt h3 {
-
     font-size: clamp(24px, 4vw, 40px);
     margin-bottom: 10px;
-
     line-height: 1.1;
 }
 
@@ -466,7 +495,6 @@ body {
     color: #272727;
 }
 
-
 .content-link,
 .project-card a {
     text-decoration: none;
@@ -483,7 +511,6 @@ body {
 .project-card:hover img {
     transform: scale(1.03);
 }
-
 
 /* PROJECT */
 .project {
@@ -513,7 +540,6 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     font-family: 'Roboto Mono', sans-serif;
-
 }
 
 .projectinner>div {
@@ -588,8 +614,6 @@ body {
     width: 100%;
 }
 
-
-
 /* FRAMAF */
 .framaf {
     padding: 120px 0;
@@ -626,7 +650,6 @@ body {
     font-family: 'Roboto Mono', sans-serif;
 }
 
-
 .framaftxt h4 span {
     font-size: 20px;
     color: #691010;
@@ -655,8 +678,7 @@ body {
     background: #691010;
 }
 
-/*FOOTER*/
-
+/* FOOTER */
 .footer {
     padding: 80px 0 60px;
     font-family: 'Roboto Mono', monospace;
@@ -685,7 +707,6 @@ body {
     font-size: 8px;
 }
 
-/* 메뉴 */
 .footer-menu h4 {
     font-size: 12px;
     margin-bottom: 15px;
@@ -717,9 +738,7 @@ body {
     opacity: 0.8;
 }
 
-/* 뉴스레터 */
 .footer-newsletter {
-
     max-width: 380px;
     margin-right: 0;
     text-align: left;
@@ -729,7 +748,6 @@ body {
     margin-bottom: 15px;
     font-weight: 500;
     letter-spacing: -0.5px;
-
 }
 
 .footer-newsletter input {
@@ -749,12 +767,10 @@ body {
     color: #fff;
     border: none;
     cursor: pointer;
-
 }
 
 .footer-newsletter button:hover {
     background: #691010;
-
 }
 
 .footer-newsletter span {
@@ -765,7 +781,6 @@ body {
     line-height: 1.5;
 }
 
-/* CONNECT */
 .footer-connect {
     text-align: center;
     margin: 100px 0 40px;
@@ -778,7 +793,6 @@ body {
     display: inline-block;
     vertical-align: middle;
 }
-
 
 .footer-connect a {
     display: inline-block;
@@ -797,7 +811,6 @@ body {
     font-weight: bold;
 }
 
-/* 하단 */
 .footer-bottom {
     text-align: center;
     font-size: 12px;
@@ -811,10 +824,7 @@ body {
 }
 
 
-
-
-
-/*SIDE MENU*/
+/* SIDE MENU */
 .overlay {
     position: fixed;
     top: 0;
@@ -832,7 +842,6 @@ body {
     opacity: 1;
     visibility: visible;
 }
-
 
 .side-menu {
     position: fixed;
@@ -869,7 +878,6 @@ body {
     height: 20px;
 }
 
-/* 메인 메뉴 항목 */
 .side-menu-item {
     border-bottom: 1px solid #C3C2C2;
     transition: background-color 0.3s ease;
@@ -880,7 +888,8 @@ body {
 }
 
 .side-menu-item:hover .side-menu-link {
-    color: #272727;
+   color: #fff;
+    background: #691010;
 }
 
 .side-menu-link {
@@ -894,7 +903,6 @@ body {
     cursor: pointer;
 }
 
-/* 하위 메뉴 (아코디언) */
 .side-submenu {
     max-height: 0;
     overflow: hidden;
@@ -918,11 +926,10 @@ body {
 }
 
 .side-submenu li a:hover {
-    color: #111;
-    background: #C3C2C2;
+    color: #fff;
+    background: #691010;
 }
 
-/* 파란색 로고 박스 */
 .side-menu .logo01 {
     height: 60px;
     background-color: #4C6EF5;
@@ -931,7 +938,6 @@ body {
     align-items: center;
     margin: 40px 0 20px 0;
     padding: 0 60px;
-
 }
 
 .side-menu .logo01 img {
@@ -939,13 +945,11 @@ body {
     filter: brightness(0) invert(1);
 }
 
-/* 소셜 아이콘 영역 */
 .side-social {
     display: flex;
     justify-content: flex-end;
     gap: 18px;
     padding: 10px 60px 30px 60px;
-    /* 좌우 60px 맞춤 */
 }
 
 .side-social img {
@@ -959,7 +963,6 @@ body {
     opacity: 1;
 }
 
-/* 하단 푸터 링크들 */
 .side-footer-links {
     padding: 20px 60px;
 }
@@ -978,7 +981,6 @@ body {
     color: #272727;
 }
 
-/* 화살표 애니메이션 */
 .arrow {
     transition: transform 0.3s;
     display: inline-block;
@@ -989,25 +991,31 @@ body {
 }
 
 
-
-/* 반응형*/
+/* =====================
+   반응형
+   ===================== */
 
 /* 1. 태블릿 & 작은 모니터 (1200px 이하) */
 @media (max-width: 1200px) {
+    .header-inner {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
 
-    .header-inner,
-    .main-visual,
     .inner {
-        padding-left: 40px !important;
-        padding-right: 40px !important;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     .main-visual {
         height: 70vh;
     }
 
+    .main-text-layer {
+        padding: 0 40px;
+    }
+
     .main-content {
-        width: 100%;
         max-width: 730px;
     }
 
@@ -1022,46 +1030,33 @@ body {
     }
 }
 
-/* 2. 태블릿 */
+/* 2. 태블릿 (1024px 이하) */
 @media (max-width: 1024px) {
-
+    .main-text-layer {
+        padding: 0 50px;
+        justify-content: center;
+    }
 
     .main-content {
-        width: 100%;
         max-width: 500px;
-        margin: 0;
         text-align: center;
     }
 
     .main-content p.series-txt {
         text-align: left;
         line-height: 1.8;
-        margin-left: auto;
-        margin-right: auto;
         max-width: 100%;
-    }
-
-    .main-content h2 {
-        margin-top: 100px;
-        margin-bottom: 30px;
-        letter-spacing: 0.8px;
-
-    }
-
-    .main-content p {
-        margin-bottom: 100px;
-    }
-
-    .main-visual {
-        padding: 0 50px !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .series-title {
         font-size: 48px;
-        margin-bottom: 15px;
+        margin-top: 100px;
+        margin-bottom: 30px;
+        letter-spacing: 0.8px;
+    }
+
+    .series-txt {
+        margin-bottom: 100px;
     }
 
     .side-menu {
@@ -1084,7 +1079,6 @@ body {
         font-size: 28px;
     }
 
-
     .footer-top {
         grid-template-columns: 1fr 1fr;
         gap: 30px;
@@ -1096,9 +1090,8 @@ body {
     }
 }
 
-/* 3. 모바일  */
+/* 3. 모바일 (768px 이하) */
 @media (max-width: 768px) {
-
     .header-center {
         display: none;
     }
@@ -1125,7 +1118,6 @@ body {
         height: auto;
         display: block;
     }
-    
 
     .menu-btn {
         padding: 0;
@@ -1157,36 +1149,34 @@ body {
         padding: 20px 25px;
     }
 
-.main-visual {
+    .main-visual {
         height: calc(100vh - 60px);
-        padding: 0;
-        background-size: cover;
-        background-position: center;
-        position: relative;
+    }
+
+    /* 모바일: 텍스트를 하단에 배치 */
+    .main-text-layer {
+        padding: 0 20px 40px 20px;
+        align-items: flex-end;
+        justify-content: flex-start;
     }
 
     .main-content {
-        position: absolute;
-        padding-left:20px;
-        padding-right:60px;
-        bottom: 40px;
-        left: 20px;
-        right: 20px;
+        max-width: 100%;
+        text-align: left;
     }
-
 
     .series-title {
         font-size: 36px;
+        margin-top: 0;
+        margin-bottom: 15px;
     }
 
     .series-txt {
         font-size: 14px;
-        line-height: 1;
+        line-height: 1.4;
         margin-bottom: 30px;
         max-width: 250px;
     }
-
- 
 
     .category-item:hover .category-thumb img:first-child {
         opacity: 1;
@@ -1237,7 +1227,6 @@ body {
         transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
-
     .projectinner>div.show {
         opacity: 1;
         transform: translateY(0);
@@ -1259,7 +1248,6 @@ body {
         height: auto;
     }
 
-    /* footer */
     .footer {
         padding: 60px 0 40px;
     }
@@ -1300,10 +1288,9 @@ body {
         line-height: 1.6;
         color: #666;
     }
-
 }
 
-/* 초소형 모바일  */
+/* 초소형 모바일 (350px 이하) */
 @media (max-width: 350px) {
     .header-inner {
         padding: 10px 8px;
@@ -1318,44 +1305,41 @@ body {
     }
 
     .main-visual {
-        display: flex;
+        height: calc(100vh - 60px);
+    }
+
+    .main-text-layer {
+        padding: 0 20px;
         align-items: center;
         justify-content: center;
-        min-height: 80vh;
-        height: auto;
-        padding: 120px 20px 80px 20px !important;
-        background-position: center center;
     }
 
     .main-content {
-        margin-top: 0;
         text-align: center;
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .series-title {
-        font-size: 36px;
+        font-size: 32px;
+        margin-top: 0;
     }
 
     .series-txt {
         font-size: 14px;
-        line-height: 1;
+        line-height: 1.4;
         margin-bottom: 30px;
         max-width: 300px;
     }
 }
 
 @media (hover: hover) and (pointer: fine) {
-
     *,
     *::before,
     *::after {
         cursor: none !important;
     }
-
 }
 
 @media (hover: none) and (pointer: coarse) {

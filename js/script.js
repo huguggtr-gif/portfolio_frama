@@ -46,37 +46,61 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectItems = document.querySelectorAll(".projectinner > div");
 
     if (projectSection) {
-
         const observer = new IntersectionObserver((entries) => {
-
             entries.forEach(entry => {
-
                 if (entry.isIntersecting) {
-
                     projectItems.forEach((item, index) => {
-
                         setTimeout(() => {
                             item.classList.add("show");
                         }, index * 150);
-
                     });
-
                     observer.unobserve(entry.target);
-
                 }
-
             });
-
         }, { threshold: 0.2 });
 
         observer.observe(projectSection);
-
     }
+
+
+    /* =========================
+    3. MAIN SLIDER
+    ========================= */
+
+    const slides = document.querySelectorAll(".slide");
+    const content = document.querySelector(".main-content");
+
+    if (slides.length > 0 && content) {
+        let current = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[index].classList.add("active");
+        }
+
+        function animateText() {
+            content.classList.remove("active");
+            setTimeout(() => {
+                content.classList.add("active");
+            }, 50);
+        }
+
+        function nextSlide() {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+            animateText();
+        }
+
+        showSlide(current);
+        setTimeout(animateText, 200);
+        setInterval(nextSlide, 3000);
+    }
+
 });
 
 
 /* =========================
-3. CURSOR (PC ONLY)
+4. CURSOR (PC ONLY)
 ========================= */
 
 if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
@@ -84,7 +108,6 @@ if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
     const cursor = document.querySelector(".cursor-dot");
 
     if (cursor) {
-
         window.addEventListener("mousemove", (e) => {
             cursor.style.left = e.clientX + "px";
             cursor.style.top = e.clientY + "px";
@@ -103,12 +126,9 @@ if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
                 cursor.classList.remove("cursor-active");
             }
         });
-
     }
 
 } else {
-
     const cursor = document.querySelector(".cursor-dot");
     if (cursor) cursor.remove();
-
 }

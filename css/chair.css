@@ -189,6 +189,39 @@ body {
     padding-bottom: 16px;
 }
 
+
+/* 브레드크럼 */
+.breadcrumb {
+    background-color: #4c6ef5;
+    padding: 14px 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 12px;
+    margin-bottom: 50px;
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+    color: #fff;
+}
+
+.bc-arrow {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+}
+
+.bc-current {
+    color: #fff;
+    font-weight: 700;
+}
+
 /* MAIN */
 .shop-container {
     width: 100%;
@@ -765,11 +798,12 @@ body {
 }
 
 .side-menu-item:hover {
-    background-color: #f9f9f9;
+    color: #fff;
+    background: #691010;
 }
 
 .side-menu-item:hover .side-menu-link {
-    color: #272727;
+    color: #fff;
 }
 
 .side-menu-link {
@@ -807,8 +841,8 @@ body {
 }
 
 .side-submenu li a:hover {
-    color: #111;
-    background: #f0f0f0;
+    color: #fff;
+    background: #691010;
 }
 
 /* 파란색 로고 박스 */
