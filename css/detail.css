@@ -3,7 +3,8 @@
 
 @font-face {
   font-family: 'Pretendard';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2')
+    format('woff2');
   font-weight: 400;
   font-display: swap;
 }
@@ -235,8 +236,8 @@ body {
 }
 
 .side-menu-item:hover {
-   color: #fff;
-    background: #691010;
+  color: #fff;
+  background: #691010;
 }
 
 .side-menu-item:hover .side-menu-link {
@@ -277,8 +278,8 @@ body {
 }
 
 .side-submenu li a:hover {
-   color: #fff;
-    background: #691010;
+  color: #fff;
+  background: #691010;
 }
 
 .side-menu .logo01 {
@@ -592,7 +593,9 @@ body {
   height: 30px;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: border-color 0.2s, transform 0.2s;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
   outline: none;
 }
 
@@ -703,7 +706,9 @@ body {
   font-size: 12px;
   letter-spacing: 0.5px;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 
 .btn-cart:hover {
@@ -915,10 +920,12 @@ body {
 .series-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg,
-      rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.1) 55%,
-      rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.1) 55%,
+    rgba(0, 0, 0, 0) 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1079,7 +1086,7 @@ body {
   direction: rtl;
 }
 
-.point-item:nth-child(even)>* {
+.point-item:nth-child(even) > * {
   direction: ltr;
 }
 
@@ -1203,9 +1210,11 @@ body {
   justify-content: flex-end;
   align-items: flex-start;
   padding: 60px 70px;
-  background: linear-gradient(to top,
-      rgba(0, 0, 0, 0.45) 0%,
-      rgba(0, 0, 0, 0) 60%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0) 60%
+  );
 }
 
 .point05-text-block {
@@ -1385,7 +1394,7 @@ body {
 }
 
 .opt-block {
-  background: #997A57;
+  background: #997a57;
 }
 
 .opt-header {
@@ -1480,7 +1489,7 @@ body {
 }
 
 .everywhere-text {
-  background: #F3CF7A;
+  background: #f3cf7a;
   padding: 80px 60px;
   display: flex;
   flex-direction: column;
@@ -1716,9 +1725,7 @@ body {
   }
 
   .bottom-sidebar {
-    position: static;
-    padding-top: 40px;
-    border-top: 1px solid #e8e8e8;
+    display: none;
   }
 
   .footer-top {
@@ -1743,7 +1750,6 @@ body {
   반응형 — 768px  ★ 핵심 수정 영역
 ======================== */
 @media (max-width: 768px) {
-
   /* ── 헤더 ── */
   .header-center {
     display: none;
@@ -1803,7 +1809,7 @@ body {
 
   /* ── 갤러리: 썸네일을 하단으로 ── */
   .product-gallery {
-    flex-direction: column-reverse;  /* 메인 위, 썸네일 아래 */
+    flex-direction: column-reverse; /* 메인 위, 썸네일 아래 */
     gap: 10px;
   }
 
@@ -1813,7 +1819,7 @@ body {
   }
 
   .gallery-thumbs {
-    flex-direction: row;             /* 가로 나열 */
+    flex-direction: row; /* 가로 나열 */
     width: 100%;
     overflow-x: auto;
     gap: 8px;
@@ -1952,7 +1958,7 @@ body {
   .point-item {
     grid-template-columns: 1fr;
     min-height: auto;
-    direction: ltr !important;   /* rtl 오버라이드 */
+    direction: ltr !important; /* rtl 오버라이드 */
   }
 
   .point-item:nth-child(even) {
@@ -1968,7 +1974,7 @@ body {
     width: 100%;
     min-height: 240px;
     max-height: 260px;
-    margin-bottom: 0;            /* 100px → 0 */
+    margin-bottom: 0; /* 100px → 0 */
   }
 
   .point-img-wrap img {
@@ -1976,7 +1982,7 @@ body {
   }
 
   .point-text-wrap {
-    padding: 28px 16px !important;  /* 좌우 padding 모두 초기화 */
+    padding: 28px 16px !important; /* 좌우 padding 모두 초기화 */
     gap: 12px;
     text-align: left !important;
   }
@@ -2063,7 +2069,6 @@ body {
   커서 미디어쿼리
 ======================== */
 @media (hover: hover) and (pointer: fine) {
-
   *,
   *::before,
   *::after {

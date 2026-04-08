@@ -78,7 +78,7 @@ thumbs.forEach((thumb) => {
       const thumbImg = thumb.querySelector('img')
       mainImage.style.opacity = '0'
       setTimeout(() => {
-        mainImage.src = thumbImg.src   // ← 썸네일 img의 src를 그대로 사용
+        mainImage.src = thumbImg.src // ← 썸네일 img의 src를 그대로 사용
         mainImage.style.opacity = '1'
       }, 200)
     }
@@ -108,41 +108,44 @@ let qty = 1
 // 요소들 한 번에 가져오기
 const qtyDisplays = [
   document.getElementById('qtyValue'),
-  document.getElementById('sideQtyValue')
+  document.getElementById('sideQtyValue'),
 ]
 
 const totalDisplays = [
   document.getElementById('totalPrice'),
-  document.getElementById('sideTotalPrice')
+  document.getElementById('sideTotalPrice'),
 ]
 
 // 버튼들
 const minusBtns = [
   document.getElementById('qtyMinus'),
-  document.getElementById('sideQtyMinus')
+  document.getElementById('sideQtyMinus'),
 ]
 
 const plusBtns = [
   document.getElementById('qtyPlus'),
-  document.getElementById('sideQtyPlus')
+  document.getElementById('sideQtyPlus'),
 ]
 
-// 화면 업데이트 함수
 function updateUI() {
-  qtyDisplays.forEach(el => {
-    if (el) el.textContent = qty
+  qtyDisplays.forEach((el) => {
+    if (!el) return
+    if (el.tagName === 'INPUT') {
+      el.value = qty
+    } else {
+      el.textContent = qty
+    }
   })
 
-  totalDisplays.forEach(el => {
+  totalDisplays.forEach((el) => {
     if (el) {
-      el.textContent =
-        (UNIT_PRICE * qty).toLocaleString('ko-KR') + '원'
+      el.textContent = (UNIT_PRICE * qty).toLocaleString('ko-KR') + '원'
     }
   })
 }
 
 // 이벤트 연결
-minusBtns.forEach(btn => {
+minusBtns.forEach((btn) => {
   if (!btn) return
   btn.addEventListener('click', () => {
     if (qty > 1) {
@@ -152,7 +155,7 @@ minusBtns.forEach(btn => {
   })
 })
 
-plusBtns.forEach(btn => {
+plusBtns.forEach((btn) => {
   if (!btn) return
   btn.addEventListener('click', () => {
     qty++
@@ -162,8 +165,6 @@ plusBtns.forEach(btn => {
 
 // 초기 실행
 updateUI()
-
-
 
 /* =========================
    동영상 
@@ -184,36 +185,31 @@ if (playBtn && productVideo && videoThumb) {
 4. CURSOR (PC ONLY)
 ========================= */
 
-if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  const cursor = document.querySelector('.cursor-dot')
 
-    const cursor = document.querySelector(".cursor-dot");
+  if (cursor) {
+    window.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px'
+      cursor.style.top = e.clientY + 'px'
+    })
 
-    if (cursor) {
+    const targets =
+      'a, button, .category-item, .side-menu-link, .menu-btn, .close-btn, .discover-btn, input'
 
-        window.addEventListener("mousemove", (e) => {
-            cursor.style.left = e.clientX + "px";
-            cursor.style.top = e.clientY + "px";
-        });
+    document.addEventListener('mouseover', (e) => {
+      if (e.target.closest(targets)) {
+        cursor.classList.add('cursor-active')
+      }
+    })
 
-        const targets = "a, button, .category-item, .side-menu-link, .menu-btn, .close-btn, .discover-btn, input";
-
-        document.addEventListener("mouseover", (e) => {
-            if (e.target.closest(targets)) {
-                cursor.classList.add("cursor-active");
-            }
-        });
-
-        document.addEventListener("mouseout", (e) => {
-            if (e.target.closest(targets)) {
-                cursor.classList.remove("cursor-active");
-            }
-        });
-
-    }
-
+    document.addEventListener('mouseout', (e) => {
+      if (e.target.closest(targets)) {
+        cursor.classList.remove('cursor-active')
+      }
+    })
+  }
 } else {
-
-    const cursor = document.querySelector(".cursor-dot");
-    if (cursor) cursor.remove();
-
+  const cursor = document.querySelector('.cursor-dot')
+  if (cursor) cursor.remove()
 }
