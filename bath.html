@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frama_chair</title>
+    <link rel="icon" href="img/favicon.ico">
+    <script src="https://kit.fontawesome.com/cada64902b.js" crossorigin="anonymous"></script>
+    <link href="css/bath.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+</head>
+
+<body>
+
+
+    <!--마우스커서변경-->
+    <div class="cursor-dot"></div>
+
+    <!--헤더-->
+    <header class="header">
+        <div class="header-inner">
+
+            <!-- LEFT -->
+            <div class="header-left">
+                <button class="menu-btn">
+                    <img src="img/menu.png" alt="Menu">
+                </button>
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="FRAMA logo">
+                </a>
+            </div>
+
+            <!-- CENTER -->
+            <div class="header-center">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="furniture, home goods, lighting, fragrances and self care">
+                    <img src="img/command.png" alt="cmd">
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="header-right">
+                <a href="#" class="mobile-search-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-flatbed"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!--SIDEMENU-->
+    <div class="overlay" id="overlay"></div>
+
+    <nav class="side-menu" id="sideMenu">
+        <div class="close-btn" id="closeBtn"><img src="img/close.png" alt="downmenu"></div>
+
+        <ul class="side-nav-list">
+            <li class="side-menu-item">
+                <a href="#" class="side-menu-link" id="shopMenu">
+                    SHOP
+                    <span class="arrow" id="arrow">
+                        <img src="img/downmenu.png" alt="downmenu">
+                    </span>
+                </a>
+                <ul class="side-submenu" id="sideSubmenu">
+                    <li><a href="furniture.html">Lighting</a></li>
+                    <li><a href="homegoods.html">Home goods</a></li>
+                    <li><a href="furniture.html">Furniture</a></li>
+                    <li><a href="furniture.html">Featured</a></li>
+                </ul>
+            </li>
+            <li class="side-menu-item"><a href="furniture.html" class="side-menu-link">Inspiration</a></li>
+            <li class="side-menu-item"><a href="furniture.html" class="side-menu-link">Stories</a></li>
+            <li class="side-menu-item"><a href="furniture.html" class="side-menu-link">Projects</a></li>
+            <li class="side-menu-item"><a href="furniture.html" class="side-menu-link">Visit</a></li>
+        </ul>
+
+        <div class="logo01">
+            <img src="img/logo01.png" alt="FRAMA Logo">
+        </div>
+
+        <div class="side-social">
+            <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="img/twitter.png" alt="X"></a>
+            <a href="#"><img src="img/youtube.png" alt="YouTube"></a>
+        </div>
+
+        <div class="side-footer-links">
+            <a href="about.html">About us</a>
+            <a href="contact.html">Contact us</a>
+            <a href="search.html">Search</a>
+        </div>
+    </nav>
+
+
+    <!--MAIN-->
+
+    <main class="shop-container">
+
+        <nav class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="bc-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+            <a href="homegoods.html">Homegoods</a>
+            
+            <span class="bc-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+            <span class="bc-current">Bath & Body</span>
+        </nav>
+
+        <header class="shop-header">
+            <div class="intro-image">
+                <img src="img/bath/b003.webp" alt="Interior view">
+            </div>
+            <div class="intro-text">
+                <h1>Bath & Body</h1>
+                <p>Discover FRAMA's bathroom essentials, a range of products that are designed to elevate your care routine.</p>
+            </div>
+        </header>
+
+        <div class="product-grid">
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b01.webp" alt="Chair"></a></div>
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b02.webp" alt="Stool"></a></div>
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b03.webp" alt="Chair Pattern"></a>
+            </div>
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b04.webp" alt="Stool Pattern"></a>
+            </div>
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b05.webp" alt="Chair Pink"></a></div>
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b06.webp" alt="Stool Pink"></a></div>
+
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b07.webp" alt="Wood Chair"></a></div>
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b08.webp" alt="Wood Chair"></a></div>
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b09.webp" alt="Wood Chair"></a></div>
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b10.webp" alt="Wood Chair"></a></div>
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b12.webp" alt="Wood Chair"></a></div>
+
+            <a href="stool-guide.html" class="guide-box stool-guide">
+                <h3>Bathroom Style Guide</h3>
+                <p>Transform your bathroom into a space of quiet luxury.</p>
+                <span class="btn-link">Explore</span>
+            </a>
+
+            <div class="span-image-box">
+                <a href="inspiration.html"><img src="img/bath/b001.webp" alt="Cafe view"></a>
+            </div>
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b14.webp" alt="Arm Chair"></a></div>
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b16.webp" alt="Folding Chair"></a>
+            </div>
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b11.webp" alt="Folding Chair"></a>
+            </div>
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b13.webp" alt="Folding Chair"></a>
+            </div>
+
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b15.webp" alt="Stool"></a></div>
+            <a href="table-collection.html" class="guide-box table-promo">
+                <h3>For<br> your body</h3>
+                <span class="btn-blue">Explore</span>
+            </a>
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b17.webp" alt="Stool"></a></div>
+            <div class="product-item"><a href="detail2.html"><img src="img/bath/b18.webp" alt="Stool"></a></div>
+        </div>
+
+        <div class="pagination">
+            <span class="page-label">PAGE</span>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="next-btn">
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        </div>
+    </main>
+
+
+    <!---FOOTER-->
+    <footer class="footer">
+        <div class="inner">
+
+            <div class="footer-top">
+
+                <div class="footer-newsletter">
+                    <p>Join the FRAMA community for 10% off your first order.</p>
+                    <input type="email" placeholder="Email">
+                    <button>SUBSCRIBE</button>
+                    <span>
+                        By subscribing you agree to FRAMA’s storage and handling of your data.
+                        For more information, visit our Privacy Policy.
+                    </span>
+                </div>
+
+                <!-- middle -->
+                <div class="footer-menu">
+                    <h4>CUSTOMER CARE</h4>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Material Care Guide</a></li>
+                        <li><a href="#">Ordering & Shipping</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <!-- right -->
+                <div class="footer-menu">
+                    <h4>INFO</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">FRAMA Studio Store</a></li>
+                        <li><a href="#">FRAMA Calendar</a></li>
+                        <li><a href="#">Retailers</a></li>
+                    </ul>
+                </div>
+
+                <!-- extra -->
+                <div class="footer-menu">
+                    <h4>Professionals</h4>
+                    <ul>
+                        <li><a href="#">B2B Partner Request</a></li>
+                        <li><a href="#">Image Bank & 2D/3D Files</a></li>
+                        <li><a href="#">Material Guide</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- 가운데 connect -->
+            <div class="footer-connect">
+                <span>CONNECT</span>
+                <a href="#">Pinterest</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Spotify</a>
+            </div>
+
+            <!-- 맨 아래 -->
+            <div class="footer-bottom">
+                <p>© 2026, FRAMA. All rights reserved.</p>
+                <a href="#">Cookies</a>
+                <a href="#">Accessibility</a>
+            </div>
+
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
+</body>
+
+</html>

@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>handwash_detail</title>
+    <link rel="icon" href="img/favicon.ico" />
+    <script
+      src="https://kit.fontawesome.com/cada64902b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="css/detail2.css" rel="stylesheet" />
+    <script defer src="js/detail2.js"></script>
+  </head>
+
+  <body>
+    <!--마우스커서변경-->
+    <div class="cursor-dot"></div>
+
+    <!--헤더-->
+    <header class="header">
+      <div class="header-inner">
+        <!-- LEFT -->
+        <div class="header-left">
+          <button class="menu-btn">
+            <img src="img/menu.png" alt="Menu" />
+          </button>
+          <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="FRAMA logo" />
+          </a>
+        </div>
+
+        <!-- CENTER -->
+        <div class="header-center">
+          <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              placeholder="furniture, home goods, lighting, fragrances and self care"
+            />
+            <img src="img/command.png" alt="cmd" />
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="header-right">
+          <a href="#" class="mobile-search-btn"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></a>
+          <a href="#"><i class="fa-solid fa-user"></i></a>
+          <a href="#"><i class="fa-solid fa-cart-flatbed"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <!--SIDEMENU-->
+    <div class="overlay" id="overlay"></div>
+
+    <nav class="side-menu" id="sideMenu">
+      <div class="close-btn" id="closeBtn">
+        <img src="img/close.png" alt="downmenu" />
+      </div>
+
+      <ul class="side-nav-list">
+        <li class="side-menu-item">
+          <a href="#" class="side-menu-link" id="shopMenu">
+            SHOP
+            <span class="arrow" id="arrow">
+              <img src="img/downmenu.png" alt="downmenu" />
+            </span>
+          </a>
+          <ul class="side-submenu" id="sideSubmenu">
+            <li><a href="furniture.html">Lighting</a></li>
+            <li><a href="homegoods.html">Home goods</a></li>
+            <li><a href="furniture.html">Furniture</a></li>
+            <li><a href="furniture.html">Featured</a></li>
+          </ul>
+        </li>
+        <li class="side-menu-item">
+          <a href="furniture.html" class="side-menu-link">Inspiration</a>
+        </li>
+        <li class="side-menu-item">
+          <a href="furniture.html" class="side-menu-link">Stories</a>
+        </li>
+        <li class="side-menu-item">
+          <a href="furniture.html" class="side-menu-link">Projects</a>
+        </li>
+        <li class="side-menu-item">
+          <a href="furniture.html" class="side-menu-link">Visit</a>
+        </li>
+      </ul>
+
+      <div class="logo01">
+        <img src="img/logo01.png" alt="FRAMA Logo" />
+      </div>
+
+      <div class="side-social">
+        <a href="#"><img src="img/instagram.png" alt="Instagram" /></a>
+        <a href="#"><img src="img/twitter.png" alt="X" /></a>
+        <a href="#"><img src="img/youtube.png" alt="YouTube" /></a>
+      </div>
+
+      <div class="side-footer-links">
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact us</a>
+        <a href="search.html">Search</a>
+      </div>
+    </nav>
+
+    <!-- ===== MAIN ===== -->
+    <main class="detail-main">
+      <!-- 브레드크럼 -->
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="bc-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        <a href="homegoods.html">Homegoods</a>
+        <span class="bc-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        <a href="bath.html">Bath & Body</a>
+        <span class="bc-arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        <span class="bc-current">Columnae Hand Wash</span>
+      </nav>
+
+      <!-- ① 상단 구역: 이미지 갤러리 + 상품 정보 -->
+      <section class="product-top">
+        <!-- 왼쪽: 갤러리 -->
+        <div class="product-gallery">
+          <div class="gallery-main">
+            <img
+              src="img/detail2/dmain01.webp"
+              alt="HAND WASH"
+              id="mainImage"
+            />
+          </div>
+          <div class="gallery-thumbs">
+            <button class="thumb active" data-img="img/detail/01.webp">
+              <img src="img/detail2/dmain01.webp" alt="thumb1" />
+            </button>
+            <button class="thumb" data-img="img/detail/thumb1.webp">
+              <img src="img/detail2/dmain02.png" alt="thumb2" />
+            </button>
+            <button class="thumb" data-img="img/detail/thumb2.jpg">
+              <img src="img/detail2/dmain03.png" alt="thumb2" />
+            </button>
+            <button class="thumb" data-img="img/detail/thumb3.webp">
+              <img src="img/detail2/dmain04.webp" alt="thumb3" />
+            </button>
+          </div>
+        </div>
+
+        <!-- 오른쪽: 상품 정보 -->
+        <div class="product-info">
+          <h1 class="product-title">HAND WASH | COLUMNAE</h1>
+
+          <div class="product-rating">
+            <i class="fa-solid fa-star"></i>
+            <span class="rating-score">5</span>
+            <span class="rating-divider">|</span>
+            <a href="#reviews" class="rating-link">3054개 리뷰 보기</a>
+          </div>
+
+          <p class="product-price">110,000원</p>
+
+          <!-- 혜택정보 -->
+          <div class="benefit-box">
+            <p class="benefit-title">혜택정보</p>
+            <ul class="benefit-list">
+              <li>
+                <span class="benefit-label">할부혜택</span>
+                <a href="#"
+                  >최대 12개월 무이자 할부
+                  <i class="fa-solid fa-chevron-right"></i
+                ></a>
+              </li>
+              <li>
+                <span class="benefit-label">결제혜택</span>
+                <a href="#"
+                  >toss pay 즉시 할인 최대 12만원
+                  <i class="fa-solid fa-chevron-right"></i
+                ></a>
+              </li>
+              <li>
+                <span class="benefit-label">배송정보</span>
+                <span>배송일 지정 상품 무료</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="divider"></div>
+
+          <!-- 색상 스와치 -->
+          <div class="option-row">
+            <div class="colour-swatches">
+              <button
+                class="swatch active"
+                data-name="Silver"
+                style="
+                  background-image: url('img/detail2/c01.jpg');
+                  background-size: cover;
+                "
+                aria-label="Silver"
+              ></button>
+              <button
+                class="swatch"
+                data-name="Beige"
+                style="
+                  background-image: url('img/detail2/c02.jpg');
+                  background-size: cover;
+                "
+                aria-label="Beige"
+              ></button>
+              <button
+                class="swatch"
+                data-name="Dark"
+                style="
+                  background-image: url('img/detail2/c03.jpg');
+                  background-size: cover;
+                "
+                aria-label="Dark"
+              ></button>
+            </div>
+
+            <!-- 타입 드롭다운 -->
+            <div class="select-wrap">
+              <select id="chairType">
+                <option value="columnae">COLUMNAE</option>
+                <option value="stool">APOTHECARY</option>
+                <option value="stool">HERBARIUM</option>
+                <option value="stool">HANDWASH+LOTION</option>
+              </select>
+              <i class="fa-solid fa-chevron-down select-icon"></i>
+            </div>
+
+            <!-- 수량 -->
+            <div class="qty-control">
+              <button
+                type="button"
+                class="qty-btn"
+                id="qtyMinus"
+                aria-label="수량 감소"
+              >
+                -
+              </button>
+              <input type="text" id="qtyValue" value="1" readonly />
+              <button
+                type="button"
+                class="qty-btn"
+                id="qtyPlus"
+                aria-label="수량 증가"
+              >
+                +
+              </button>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <!-- 총 상품금액 -->
+          <div class="total-price-row">
+            <span class="total-label">총 상품금액</span>
+            <span class="total-price" id="totalPrice">110,000원</span>
+          </div>
+
+          <!-- 구매 버튼 -->
+          <div class="buy-buttons">
+            <button class="btn-cart">장바구니 담기</button>
+            <button class="btn-buy">바로 구매하기</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 하단 구역 -->
+      <section class="product-bottom">
+        <!-- 하단 구역 왼쪽 상세페이지 -->
+        <div class="bottom-left">
+          <!-- 동영상-브랜드소개 -->
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/h0jalfqvlMk?autoplay=1&mute=1&controls=0&loop=1&playlist=h0jalfqvlMk"
+              allow="autoplay; encrypted-media"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+          <div class="detail01">
+            <img src="img/detail2/de01.png" />
+          </div>
+          <div class="detail02">
+            <img src="img/detail2/de02.png" />
+          </div>
+          <div class="detail03">
+            <img src="img/detail2/de03.png" />
+          </div>
+          <div class="detail04">
+            <img src="img/detail2/de04.png" />
+          </div>
+          <div class="detail05">
+            <img src="img/detail2/de05.png" />
+          </div>
+          <div class="detail06">
+            <img src="img/detail2/de06.png" />
+          </div>
+          <div class="detail07">
+            <img src="img/detail2/de07.png" />
+          </div>
+          <div class="detail08">
+            <img src="img/detail2/de08.png" />
+          </div>
+        </div>
+
+        <!-- 오른쪽: 고정 사이드 패널 -->
+        <aside class="bottom-sidebar" id="bottomSidebar">
+          <div class="sidebar-inner">
+            <p class="sidebar-product-name">HAND WASH</p>
+            <p class="sidebar-material">Columnae</p>
+            <p class="sidebar-price">110,000원</p>
+
+            <div class="divider"></div>
+
+            <div class="sidebar-swatches">
+              <p class="sidebar-label">Colour</p>
+              <div class="colour-swatches">
+                <button
+                  class="swatch active"
+                  style="
+                    background-image: url('img/detail2/c01.jpg');
+                    background-size: cover;
+                  "
+                  aria-label="Silver"
+                ></button>
+                <button
+                  class="swatch"
+                  style="
+                    background-image: url('img/detail2/c02.jpg');
+                    background-size: cover;
+                  "
+                  aria-label="Beige"
+                ></button>
+                <button
+                  class="swatch"
+                  style="
+                    background-image: url('img/detail2/c03.jpg');
+                    background-size: cover;
+                  "
+                  aria-label="Dark"
+                ></button>
+              </div>
+            </div>
+
+            <div class="sidebar-qty">
+              <p class="sidebar-label">Quantity</p>
+              <div class="qty-control">
+                <button
+                  type="button"
+                  class="qty-btn"
+                  id="sideQtyMinus"
+                  aria-label="수량 감소"
+                >
+                  -
+                </button>
+                <span id="sideQtyValue">1</span>
+                <button
+                  type="button"
+                  class="qty-btn"
+                  id="sideQtyPlus"
+                  aria-label="수량 증가"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div class="sidebar-total-row">
+              <span class="sidebar-label">총 상품금액</span>
+              <span class="sidebar-total-price" id="sideTotalPrice"
+                >820,000원</span
+              >
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="buy-buttons">
+              <button class="btn-cart">장바구니 담기</button>
+              <button class="btn-buy">바로 구매하기</button>
+            </div>
+
+            <div class="sidebar-links">
+              <a href="#"><i class="fa-regular fa-heart"></i> 위시리스트</a>
+              <a href="#"><i class="fa-solid fa-share-nodes"></i> 공유하기</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <!---FOOTER-->
+    <footer class="footer">
+      <div class="inner">
+        <div class="footer-top">
+          <div class="footer-newsletter">
+            <p>Join the FRAMA community for 10% off your first order.</p>
+            <input type="email" placeholder="Email" />
+            <button>SUBSCRIBE</button>
+            <span>
+              By subscribing you agree to FRAMA’s storage and handling of your
+              data. For more information, visit our Privacy Policy.
+            </span>
+          </div>
+
+          <!-- middle -->
+          <div class="footer-menu">
+            <h4>CUSTOMER CARE</h4>
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Material Care Guide</a></li>
+              <li><a href="#">Ordering & Shipping</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Returns & Exchanges</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+
+          <!-- right -->
+          <div class="footer-menu">
+            <h4>INFO</h4>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">FRAMA Studio Store</a></li>
+              <li><a href="#">FRAMA Calendar</a></li>
+              <li><a href="#">Retailers</a></li>
+            </ul>
+          </div>
+
+          <!-- extra -->
+          <div class="footer-menu">
+            <h4>Professionals</h4>
+            <ul>
+              <li><a href="#">B2B Partner Request</a></li>
+              <li><a href="#">Image Bank & 2D/3D Files</a></li>
+              <li><a href="#">Material Guide</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 가운데 connect -->
+        <div class="footer-connect">
+          <span>CONNECT</span>
+          <a href="#">Pinterest</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Spotify</a>
+        </div>
+
+        <!-- 맨 아래 -->
+        <div class="footer-bottom">
+          <p>© 2026, FRAMA. All rights reserved.</p>
+          <a href="#">Cookies</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
