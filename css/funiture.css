@@ -249,7 +249,7 @@ body {
 
 .side-menu-item:hover {
   color: #fff;
-    background: #691010;
+  background: #691010;
 }
 
 .side-menu-item:hover .side-menu-link {
@@ -291,8 +291,8 @@ body {
 }
 
 .side-submenu li a:hover {
-   color: #fff;
-    background: #691010;
+  color: #fff;
+  background: #691010;
 }
 
 /* 파란색 로고 박스 */
@@ -360,7 +360,6 @@ body {
   transform: rotate(180deg);
 }
 
-
 /* 브레드크럼 */
 .breadcrumb {
   background-color: #4c6ef5;
@@ -370,7 +369,7 @@ body {
   gap: 10px;
   font-family: 'Roboto Mono', sans-serif;
   font-size: 12px;
-  margin-bottom:50px;
+  margin-bottom: 50px;
 }
 
 .breadcrumb a {
@@ -395,7 +394,7 @@ body {
 
 /* --- FURNITURE MAIN PAGE --- */
 .furniture-page {
-  padding-top: 80px;
+  padding-top: 70px;
   background-color: #fff;
 }
 
@@ -700,7 +699,7 @@ body {
 /* 2. 태블릿 */
 @media (max-width: 1024px) {
   .furniture-page {
-    padding-top: 10px;
+    padding-top: 70px;
   }
 
   .furniture-intro {
@@ -749,7 +748,7 @@ body {
   }
 
   .furniture-page {
-    padding-top: 40px;
+    padding-top: 60px;
   }
 
   .furniture-intro {
